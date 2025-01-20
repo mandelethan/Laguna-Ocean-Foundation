@@ -4,32 +4,43 @@ import { Button } from './ui/button';
 import { Sheet, SheetTrigger, SheetContent, SheetTitle } from './ui/sheet';
 import { Menu as MenuIcon } from 'lucide-react';
 
+const navigationItems = [
+  {
+    name: "Home",
+    href: "/#",
+  },
+  {
+    name: "Locations",
+    href: "/locations"
+  },
+  {
+    name: "Species",
+    href: "/species"
+  }
+]
+
 export default function Navbar() {
   return (
     <header className="fixed flex h-20 w-full shrink-0 items-center border-b px-4 md:px-6">
       <Sheet>
-        <div className="w-full lg:w-0">
-          <img src="/LOF_Logo_LightBackground-1.png" className="w-20 h-12"/>
+        <div className="flex items-center w-full lg:w-0 justify-between">
+          <img src="/LOF_Logo.png" className="w-12 h-12"/>
           <SheetTrigger asChild>
-            <MenuIcon className="lg:hidden float-right"/>
+            <div className="flex items-center hover:cursor-pointer">
+              <MenuIcon className="lg:hidden float-right"/>
+              <h1 className="pl-1">Menu</h1>
+            </div>
           </SheetTrigger>
         </div>
         
-        <SheetContent side="right" className="bg-white">
-          <SheetTitle className="hidden">Navigation Men</SheetTitle>
-          <div className="grid gap-4 py-6 bg-white">
-            <Link href="/home" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
-              <img src="/LOF_Logo_LightBackground-1.png"/>
-            </Link>
-            <Link href="/about" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
-              About
-            </Link>
-            <Link href="/services" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
-              Services
-            </Link>
-            <Link href="/contact" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
-              Contact
-            </Link>
+        <SheetContent side="right" className="bg-white w-[40%]">
+          <SheetTitle className="hidden">Navigation Menu</SheetTitle>
+          <div className="grid gap-4 py-6 bg-white items-center">
+            {navigationItems.map(item => (
+              <Link key={item.href} href={item.href} className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                {item.name}
+              </Link>
+            ))}
           </div>
         </SheetContent>
       </Sheet>
@@ -51,7 +62,6 @@ export default function Navbar() {
               Contact
             </Link>
           </div>
-          
         </nav>
       </div>
     </header>
