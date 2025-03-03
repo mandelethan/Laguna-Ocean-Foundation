@@ -15,7 +15,7 @@ const navigationItems = [
     href: "/locations"
   },
   {
-    name: "Species",
+    name: "Species Guide",
     href: "/species"
   }
 ]
@@ -34,9 +34,9 @@ export default function Navbar() {
           </SheetTrigger>
         </div>
         {/* Menu that shows when the navbar is opened */}
-        <SheetContent side="right" className="bg-white w-[40%]">
+        <SheetContent side="right" className="bg-white w-[80%]">
           <SheetTitle className="hidden">Navigation Menu</SheetTitle>
-          <div className="grid gap-4 py-6 bg-white items-center">
+          <div className="grid gap-4 py-6 bg-white items-center pl-4">
             {navigationItems.map(item => (
               <Link key={item.href} href={item.href} className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                 {item.name}
