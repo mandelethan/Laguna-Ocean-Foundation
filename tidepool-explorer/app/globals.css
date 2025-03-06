@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Arial", sans-serif;
+  --font-mono: "Arial", sans-serif;
+}
+:root {
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
