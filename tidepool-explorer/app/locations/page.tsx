@@ -28,24 +28,32 @@ const locationDetails = [
 function Locations() {
   return (
     <>
-      {/* Map picture section */}
+      {/* Images section */}
       <section className="pt-20 relative">
+        {/* Laguna Beach map */}
         <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center">
-          <Image src="/temp.jpg" alt="Map Picture" layout="fill" objectFit="cover" />
+          <Image src="/locations/laguna-map.png" alt="Map Picture" layout="fill" objectFit="cover" />
+        </div>
+        {/* Waves */}
+        <div className="relative h-[200px] md:h-[400px] lg:h-[600px] bg-cover bg-center ">
+          <Image src="/locations/Waves.png" alt="Waves" layout="fill" objectFit="cover" />
         </div>
       </section>
       {/* Locations section */}
-      <section className="mx-4">
+      <section className="px-4 bg-[#d6f0ff]">
         <h1 className="text-2xl my-4 font-bold text-blue-900 text-left">
           Locations
         </h1>
+        {/* Dynamically create the locations accordion */}
         <Accordion type="single" collapsible className="w-full">
           {locationDetails.map((location, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
+              {/* Locations accordion image */}
               <div className="relative h-[200px] flex items-center justify-center bg-cover bg-center mb-4">
                 <Image src={location.image} alt={`${location.name} Picture`} layout="fill" objectFit="cover" className="rounded-xl"/>
               </div>
               <AccordionTrigger>
+                {/* Location name and difficulty */}
                 <div className="text-blue-950 flex flex-col">
                   <h2 className="font-bold text-5xl">{location.name}</h2>
                   <div className="flex items-center">
@@ -55,6 +63,7 @@ function Locations() {
                 </div>
               </AccordionTrigger>
               <AccordionContent>
+                {/* Location accordion content */}
                 <p>{location.overview}</p>
                 <div className="text-blue-950">
                   <h3 className="text-xl font-bold mb-3">Overview</h3>

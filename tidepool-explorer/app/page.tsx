@@ -5,7 +5,7 @@ import { CircleArrowRight } from "lucide-react";
 function Home() {
   return (
     <>
-      {/* Home banner picture */}
+      {/* Intro picture */}
       <section className="pt-20 relative">
         <div className="relative h-[200px] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/temp.jpg')" }}>
         </div>
