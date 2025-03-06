@@ -8,8 +8,10 @@ import { Menu as MenuIcon } from 'lucide-react';
 
 const navigationItems = [
   { name: "Home", href: "/#" },
+  { name: "Plan Your Trip", href: "/plan-your-trip" },
   { name: "Locations", href: "/locations" },
-  { name: "Species Guide", href: "/species" }
+  { name: "Species Guide", href: "/species" },
+  { name: "FAQs", href: "/faqs" },
 ];
 
 export default function Navbar() {
