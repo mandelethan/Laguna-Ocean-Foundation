@@ -79,30 +79,27 @@ const locationDetails = [
 
 function Locations() {
   return (
-    <>
-      {/* Images section */}
-      <section className="pt-20 relative">
-        {/* Laguna Beach map */}
-        <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center">
-          <Image src="/locations/laguna-map.png" alt="Map Picture" layout="fill" objectFit="cover" />
-        </div>
-        {/* Waves */}
-        <div className="relative h-[200px] md:h-[400px] lg:h-[600px] bg-cover bg-center ">
-          <Image src="/locations/WavesCopy.png" alt="Waves" layout="fill" objectFit="cover" />
-        </div>
-      </section>
+    <section className="pt-20 relative text-[#19516a]">
+      {/* Laguna Beach map */}
+      <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center">
+        <Image src="/locations/laguna-map.png" alt="Map Picture" layout="fill" objectFit="cover" />
+      </div>
+      {/* Waves */}
+      <div className="relative h-[200px] md:h-[400px] lg:h-[600px] bg-cover bg-center">
+        <Image src="/locations/WavesCopy.png" alt="Waves" layout="fill" objectFit="cover" />
+      </div>
+
       {/* Locations section */}
-      <section className="px-4 bg-[#d6f0ff]">
-        <h1 className="text-2xl pb-4 font-bold text-blue-900 text-left">
-          Locations
-        </h1>
+      <div className="px-4 bg-[#d6f0ff]">
+        <h1 className="text-4xl pb-6 font-bold text-left">Locations</h1>
+
         {/* Dynamically create the locations accordion */}
         <Accordion type="single" collapsible className="w-full">
           {locationDetails.map((location, index) => (
             <AccordionItem key={index} value={`item-${index}`} className={index < locationDetails.length - 1 ? "mb-6" : ""}>
               {/* Locations accordion image */}
               <div className="relative h-[200px] flex items-center justify-center bg-cover bg-center">
-                <Image src={location.image} alt={`${location.name} Picture`} layout="fill" objectFit="cover" className="rounded-xl"/>
+                <Image src={location.image} alt={`${location.name} Picture`} layout="fill" objectFit="cover" className="rounded-xl" />
               </div>
               <AccordionTrigger>
                 {/* Location title */}
@@ -119,7 +116,7 @@ function Locations() {
               <AccordionContent>
                 {/* Location accordion content */}
                 <p>{location.overview}</p>
-                <div className="text-blue-950">
+                <div>
                   <h3 className="text-xl font-bold mb-3">Overview</h3>
                   <div className="flex flex-col ml-12">
                     {/* Accessibility */}
@@ -141,7 +138,6 @@ function Locations() {
                       {location.coordinates.map((coords, index) => (
                         <p className="ml-8" key={index}>{coords}</p>
                       ))}
-                      
                     </div>
                     {/* Access Point */}
                     <div className="mb-4">
@@ -165,9 +161,9 @@ function Locations() {
             </AccordionItem>
           ))}
         </Accordion>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
 
-export default Locations
+export default Locations;

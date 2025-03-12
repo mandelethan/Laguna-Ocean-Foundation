@@ -3,7 +3,9 @@ import React from 'react'
 function FAQs() {
   return (
     <section className="pt-20">
-        <div>FAQ page</div>
+        <h1>
+          Frequently Asked Questions
+        </h1>
     </section>
   )
 }
