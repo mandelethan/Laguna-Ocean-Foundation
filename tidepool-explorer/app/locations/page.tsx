@@ -79,7 +79,7 @@ const locationDetails = [
 
 function Locations() {
   return (
-    <section className="pt-20 relative">
+    <section className="pt-20 relative text-[#19516a]">
       {/* Laguna Beach map */}
       <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center">
         <Image src="/locations/laguna-map.png" alt="Map Picture" layout="fill" objectFit="cover" />
@@ -91,7 +91,7 @@ function Locations() {
 
       {/* Locations section */}
       <div className="px-4 bg-[#d6f0ff]">
-        <h1 className="text-2xl pb-4 font-bold text-blue-900 text-left">Locations</h1>
+        <h1 className="text-4xl pb-6 font-bold text-left">Locations</h1>
 
         {/* Dynamically create the locations accordion */}
         <Accordion type="single" collapsible className="w-full">
@@ -116,7 +116,7 @@ function Locations() {
               <AccordionContent>
                 {/* Location accordion content */}
                 <p>{location.overview}</p>
-                <div className="text-blue-950">
+                <div>
                   <h3 className="text-xl font-bold mb-3">Overview</h3>
                   <div className="flex flex-col ml-12">
                     {/* Accessibility */}
