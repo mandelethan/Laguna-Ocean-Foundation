@@ -28,8 +28,8 @@ function PlanYourTrip() {
         <p className="max-w-md mx-auto">
           Embark on your tidepool adventure by first checking out the best times to visit based on
           tide schedules and researching the location for accessibility options like wheelchair ramps
-          or smooth paths. Don’t forget to grab your trusty tidepool exploration gear, including sturdy
-          footwear for navigating rocky terrain! And remember, while you're marveling at the wonders
+          or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy
+          footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders
           of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
         </p>
       </div>
