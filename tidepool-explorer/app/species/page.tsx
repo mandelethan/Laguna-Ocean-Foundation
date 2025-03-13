@@ -2,7 +2,9 @@ import React from 'react'
 
 function Species() {
   return (
-    <div>Species Page</div>
+    <section className="pt-20">
+      <div>Species page</div>
+    </section>
   )
 }
 

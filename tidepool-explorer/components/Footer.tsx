@@ -40,12 +40,16 @@ export default function Footer() {
           ))}
         </div>
         <div>
-          <Button className="bg-[#3a899b] text-white w-24 mr-2">
-            <Link href="https://www.lagunaoceanfoundation.org/volunteering">Volunteer</Link>
-          </Button>
-          <Button className="bg-[#3a899b] text-white w-24">
-            <Link href="https://givebutter.com/laguna-ocean-foundation">Donate</Link>
-          </Button>
+          <Link href="https://www.lagunaoceanfoundation.org/volunteering" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-[#3a899b] text-white w-24 mr-2 hover:cursor-pointer">
+              Volunteer
+            </Button>
+          </Link>
+          <Link href="https://givebutter.com/laguna-ocean-foundation" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-[#3a899b] text-white w-24 hover:cursor-pointer">
+              Donate
+            </Button>
+          </Link>
         </div>
         <h3 className="mt-4 text-lg text-[#19516a]">Laguna Beach, CA</h3>
       </div>
