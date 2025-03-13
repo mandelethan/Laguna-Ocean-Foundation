@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 
 function MPARules() {
   return (
     <section className="pt-20 text-base leading-relaxed font-['Nunito_Sans'] text-gray-800">
       {/* Hero Section */}
       <div className="relative w-full">
-        <img
+        <Image
           src="/mpa rules/Colorful Starfish.JPG"
           alt="Colorful tidepool background"
           className="w-full h-auto object-cover"

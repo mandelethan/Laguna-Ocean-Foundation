@@ -39,7 +39,7 @@ function Home() {
           Discover Tide Pool Life
         </h2>
         <p className="pt-1 px-6 text-sm text-center">
-          Dive into the wonders of Laguna Beach's tide pools! Meet the incredible species and explore the unique habitats that make these coastal treasures come alive.
+          Dive into the wonders of Laguna Beach&apos;s tide pools! Meet the incredible species and explore the unique habitats that make these coastal treasures come alive.
         </p>
         <p>
           Insert species here?

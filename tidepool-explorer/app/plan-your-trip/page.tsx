@@ -1,19 +1,20 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function PlanYourTrip() {
   return (
     <section className="pt-20 bg-white text-gray-800 font-['Nunito_Sans'] text-lg leading-relaxed">
       {/* Hero + Page Break */}
       <div className="relative w-full">
-        <img 
+        <Image 
           src="/plan your trip/Laguna Beach Sunset Serenade.png" 
           alt="Coastline view at sunset" 
           className="w-full h-auto object-cover"
         />
         <div className="-mt-1 w-full overflow-hidden">
-          <img 
+          <Image 
             src="/plan your trip/page_break-removebg-preview.png" 
             alt="page break cloud shape"
             className="w-full h-auto object-cover block"
@@ -36,7 +37,7 @@ function PlanYourTrip() {
       {/* Sea Life Image */}
       <div className="mt-10 text-center px-6">
         <div className="flex justify-center mb-4">
-          <img 
+          <Image 
             src="/plan your trip/G0534246.jpg" 
             alt="Underwater tidepool scene" 
             className="rounded-xl shadow-md w-96 max-w-full"
@@ -71,7 +72,7 @@ function PlanYourTrip() {
         <h3 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Location, Location, Location</h3>
         <p className="max-w-md mx-auto mb-6">
           Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools
-          such as Treasure Island, Shaw’s Cove, or Heisler Park. Start by checking tide schedules for
+          such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for
           optimal viewing times and accessibility options, ensuring everyone can join in the fun. With
           your curiosity as your guide, wander through these rocky havens, uncovering hidden marine
           treasures and encountering fascinating sea creatures along the way.
@@ -82,7 +83,7 @@ function PlanYourTrip() {
         </p>
         <Link href="/locations">
           <div className="relative max-w-md mx-auto cursor-pointer group mb-6">
-            <img
+            <Image
               src="/plan your trip/G0136775.jpg"
               alt="Person exploring tidepools"
               className="rounded-xl w-full h-auto shadow-lg"
@@ -114,7 +115,7 @@ function PlanYourTrip() {
         </p>
         <Link href="/mpa-rules">
           <div className="relative max-w-md mx-auto cursor-pointer group">
-            <img
+            <Image
               src="/plan your trip/moss-cove-laguna-beach.jpg"
               alt="MPA sign at beach"
               className="rounded-xl w-full h-auto shadow-lg"
