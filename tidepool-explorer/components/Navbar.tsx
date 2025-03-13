@@ -53,9 +53,11 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-[#3a899b] text-white self-center">
-              <Link className="w-full" href="https://givebutter.com/laguna-ocean-foundation" target="_blank" rel="noopener noreferrer">Donate</Link>
-            </Button>
+            <Link href="https://givebutter.com/laguna-ocean-foundation" target="_blank" rel="noopener noreferrer" className="self-center">
+              <Button className="bg-[#3a899b] text-white hover:cursor-pointer">
+                Donate
+              </Button>
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
