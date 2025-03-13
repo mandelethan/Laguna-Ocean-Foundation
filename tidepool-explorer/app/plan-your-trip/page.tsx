@@ -58,7 +58,7 @@ function PlanYourTrip() {
             Tide Charts
           </a>{' '}
           are great ways to see how high or low the water level is going to be at any given day.
-          When the tide is low, it can reveal more of the shore’s secrets! Be aware that there will be
+          When the tide is low, it can reveal more of the shore&apos;s secrets! Be aware that there will be
           fewer visible tidepools during higher water levels, and much of the shore may be submerged
           or inaccessible.
         </p>
