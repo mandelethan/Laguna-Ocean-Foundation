@@ -22,7 +22,7 @@ const locationDetails = [
     ],
     accessPoint: "Stairs at corner of Circle Way or ramp at Cliff Dr. & Circle Way intersection",
     parking: "Residential parking or Trolley Stop at Cliff Drive and Marine Drive intersection",
-    image: "/temp.jpg"
+    image: "/locations/Crescent-Bay.jpg"
   },
   {
     name: "Goff Island",
@@ -31,7 +31,7 @@ const locationDetails = [
     coordinates: [`33°30'49"N 117°45'37"W`],
     accessPoint: "From ramp at the end of Treasure Island Park trail",
     parking: "Lot 7 and Lot 8 or metered parking on Wesley Drive",
-    image: "/temp.jpg"
+    image: "/locations/Goff Island.jpg"
   },
   {
     name: "Heisler Park",
@@ -40,7 +40,7 @@ const locationDetails = [
     coordinates: [`33°32'33"N 117°47'20"W`],
     accessPoint: "Stairs in front of Las Brisas or walk along Main Beach",
     parking: "Metered parking along Cliff Drive",
-    image: "/temp.jpg"
+    image: "/locations/Heisler Park.png"
   },
   {
     name: "Shaws Cove (North and South)",
@@ -55,7 +55,7 @@ const locationDetails = [
     ],
     accessPoint: "Stairs at Fairview St. & Cliff Dr.",
     parking: "Residential parking or Trolley Stop at Cliff Drive and Fairview Street Intersection",
-    image: "/temp.jpg"
+    image: "/locations/Shaws-Cove.jpg"
   },
   {
     name: "Treasure Island",
@@ -64,7 +64,7 @@ const locationDetails = [
     coordinates: [`33°30'48"N 117°45'28"W`],
     accessPoint: "Stairs or ramp along Treasure Island Park trail",
     parking: "Lot 7 and Lot 8 or metered parking on Wesley Drive",
-    image: "/temp.jpg"
+    image: "/locations/Treasure Island.png"
   },
   {
     name: "Wood's Cove",
@@ -73,7 +73,7 @@ const locationDetails = [
     coordinates: [`33°31'35"N 117°46'14"W`],
     accessPoint: "Diamond St. or Pearl St.",
     parking: "Trolley Stop at PCH and Diamond Street Intersection or nearby metered parking",
-    image: "/temp.jpg"
+    image: "/locations/Woods-Cove.jpg"
   },
 ]
 
@@ -86,7 +86,7 @@ function Locations() {
       </div>
       {/* Waves */}
       <div className="relative h-[200px] md:h-[400px] lg:h-[600px] bg-cover bg-center">
-        <Image src="/locations/WavesCopy.png" alt="Waves" layout="fill" objectFit="cover" />
+        <Image src="/locations/Waves.png" alt="Waves" layout="fill" objectFit="cover" />
       </div>
 
       {/* Locations section */}
@@ -98,7 +98,7 @@ function Locations() {
           {locationDetails.map((location, index) => (
             <AccordionItem key={index} value={`item-${index}`} className={index < locationDetails.length - 1 ? "mb-6" : ""}>
               {/* Locations accordion image */}
-              <div className="relative h-[200px] flex items-center justify-center bg-cover bg-center">
+              <div className="relative h-[200px] lg:h-[400px] flex items-center justify-center bg-cover bg-center">
                 <Image src={location.image} alt={`${location.name} Picture`} layout="fill" objectFit="cover" className="rounded-xl" />
               </div>
               <AccordionTrigger>
