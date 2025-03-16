@@ -157,7 +157,7 @@ function Species() {
       </div>
       <Tabs defaultValue="birds" className="w-full">
         {/* Hardcoded Tab Navigation */}
-        <TabsList className="grid w-full h-auto grid-cols-4 lg:grid-cols-5 gap-2 mb-5 md:mb-0 bg-blue-100">
+        <TabsList className="grid w-full h-auto grid-cols-4 gap-2 mb-5 md:mb-0 bg-blue-100">
           <TabsTrigger value="birds" className="whitespace-normal text-center">Birds</TabsTrigger>
           <TabsTrigger value="marine-mammals" className="whitespace-normal text-center">Marine Mammals</TabsTrigger>
           <TabsTrigger value="invertebrates-and-bony-fish" className="whitespace-normal text-center">Invertebrates and Bony Fish</TabsTrigger>
