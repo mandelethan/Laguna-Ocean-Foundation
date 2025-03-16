@@ -148,7 +148,7 @@ function Species() {
   const [selectedSpecies, setSelectedSpecies] = useState<SpeciesItem | null>(null);
 
   return (
-    <section className="pt-20 bg-[#19516a]">
+    <section className="pt-20 bg-[#19516a] min-h-screen">
       <div className="flex flex-col items-center text-white justify-center text-center my-4">
         <h2 className="text-2xl font-bold mb-3">Species Guide</h2>
         <h3 className="text-xl font-bold mt-2">Get ready to be amazed when you visit the tidepools.</h3>
