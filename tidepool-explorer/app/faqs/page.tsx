@@ -2,15 +2,13 @@
 
 import React from 'react'
 import { useState } from 'react'
-import QA from './QA';
-import QAaccord from '@/components/ui/accordqa';
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import QAaccord from "@/components/ui/accordqa"
 import { Nunito_Sans } from "next/font/google"
 
 const nunitoFont = Nunito_Sans({
     subsets: ["latin"],
     weight: ["400", "700"]
-})
+});
 
 const faqData = [
   {
@@ -51,23 +49,25 @@ function FAQs() {
   const isSomeActive = active.some((element)=>element);
 
   const handleClick = () => {
-    isSomeActive ? setActive([false, false, false, false, false, false, false]) : setActive([true, true, true, true, true, true, true]);
+    if (isSomeActive) {
+      setActive([false, false, false, false, false, false, false]);
+    }
+    else {
+      setActive([true, true, true, true, true, true, true]);
+    }
   }
 
   return (
     <section className={`pt-20 bg-[#35899F] p-3 w-full text-white ${nunitoFont.className}`}>
-      
-
-
       <QAaccord
-        handleClick={handleClick}
-        isSomeActive={isSomeActive}
-        data={faqData}
-        turn={active}
-        setTurn={setActive}
+      handleClick={handleClick}
+      isSomeActive={isSomeActive}
+      data={faqData}
+      turn={active}
+      setTurn={setActive}
       />        
     </section>
   )
 }
 
-export default FAQs
+export default FAQs;

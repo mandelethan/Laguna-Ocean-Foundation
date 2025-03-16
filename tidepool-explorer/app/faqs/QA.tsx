@@ -1,7 +1,7 @@
 "use client"
 
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
+import { ChevronDownIcon} from "lucide-react"
+import { Dispatch, SetStateAction, useEffect, useRef} from 'react'
 
 type Props = {
     question: string,
@@ -22,7 +22,7 @@ const QA = ({question, answer, turn, setTurn, idx} : Props) => {
     }, [contentRef, turn, idx])
 
     const toggleAccordion = () => {
-        let newTurn = [...turn!];
+        const newTurn = [...turn!];
         newTurn[idx] = !newTurn[idx];
         setTurn!(newTurn);
     }

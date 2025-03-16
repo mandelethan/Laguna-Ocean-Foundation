@@ -1,12 +1,6 @@
 import React, { Dispatch, SetStateAction } from 'react'
-import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import { ChevronDownIcon } from "lucide-react"
 import QA from '@/app/faqs/QA'
-// import { Nunito_Sans } from "next/font/google"
-
-// const nunitoFont = Nunito_Sans({
-//     subsets: ["latin"],
-//     weight: "400"
-// })
 
 type Props = {
     question : string,
@@ -17,7 +11,7 @@ type Props = {
 
 interface QAProps {
     handleClick: React.MouseEventHandler<HTMLButtonElement>,
-    isSomeActive: any,
+    isSomeActive: boolean,
     turn: boolean[],
     setTurn: Dispatch<SetStateAction<boolean[]>>,
     data: Props[]
@@ -35,7 +29,7 @@ const QAaccord = ({handleClick, isSomeActive, data, turn, setTurn} : QAProps) =>
             </span>
 
             <p className="text-sm font-normal text-center">
-                Here's some answers to the most asked questions.
+                Heres some answers to the most asked questions.
             </p>
         </div>
         {/* Open/Close all button */}
@@ -68,4 +62,4 @@ const QAaccord = ({handleClick, isSomeActive, data, turn, setTurn} : QAProps) =>
   )
 }
 
-export default QAaccord
+export default QAaccord;
