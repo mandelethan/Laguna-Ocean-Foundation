@@ -62,8 +62,8 @@ const speciesData = {
       commonName: "California Sea Lion",
       scientificName: "Zalophus californianus",
       images: [
-        "/species/marine-mammals/california-sea-lion/1.JPG",
-        "/species/marine-mammals/california-sea-lion/2.JPG",
+        "/species/marine-mammals/california-sea-lion/1.jpg",
+        "/species/marine-mammals/california-sea-lion/2.jpg",
         "/species/marine-mammals/california-sea-lion/3.jpg"
       ],
     },
@@ -71,8 +71,8 @@ const speciesData = {
       commonName: "Harbor Seal",
       scientificName: "Phoca vitulina",
       images: [
-        "/species/marine-mammals/harbor-seal/1.jpg",
-        "/species/marine-mammals/harbor-seal/2.jpg",
+        "/species/marine-mammals/harbor-seal/1.JPG",
+        "/species/marine-mammals/harbor-seal/2.JPG",
         "/species/marine-mammals/harbor-seal/3.jpg"
       ],
     },
