@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { CircleArrowRight } from "lucide-react";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -24,10 +25,12 @@ function Home() {
           <p className="text-sm my-3">
             Learn how to tidepool like a pro! Discover tips for safe, fun, and eco-friendly adventures, plus everything you need to know to plan your visit.
           </p>
-          <Button className="text-[#1A516A] text-2xl bg-[#ACE9FF] h-14 rounded-2xl">
-              Get Started
-            <CircleArrowRight />
-          </Button>
+          <Link href="/plan-your-trip">
+            <Button className="text-[#1A516A] text-2xl bg-[#ACE9FF] h-14 rounded-2xl cursor-pointer w-full">
+                Get Started
+              <CircleArrowRight />
+            </Button>
+          </Link>
         </div>
         
         {/* Locations */}
@@ -38,9 +41,11 @@ function Home() {
           <p className="text-md text-white my-3 px-1 text-center">
             Theres so much for you to see at our beautiful tidepools! Learn more about each of our six tidepools located along the Laguna Beach coast line.
           </p>
-          <Button className="bg-[#CCA361] text-white text-2xl h-14 rounded-xl">
-            Lets Explore
-          </Button>
+          <Link href="/locations">
+            <Button className="bg-[#CCA361] text-white text-2xl h-14 rounded-xl cursor-pointer w-full">
+              Lets Explore
+            </Button>
+          </Link>
           {/* <h2 className="text-sm underline pt-6 pr-6 text-blue-300 float-right hover">
             See All
           </h2> */}
@@ -51,10 +56,12 @@ function Home() {
           <h2 className="text-xl pt-4 font-bold text-[#1A516A] text-center">
             Discover Tide Pool Life
           </h2>
-          <Button className="text-[#1A516A] text-2xl bg-[#ACE9FF] my-3 h-14 rounded-xl">
-            Explore Species
-            <CircleArrowRight />
-          </Button>
+          <Link href="/species">
+            <Button className="text-[#1A516A] text-2xl bg-[#ACE9FF] my-3 h-14 rounded-xl cursor-pointer w-full">
+              Explore Species
+              <CircleArrowRight />
+            </Button>
+          </Link>
           <p className="pt-1 px-6 text-sm text-center">
             Dive into the wonders of Laguna Beach&apos;s tide pools! Meet the incredible species and explore the unique habitats that make these coastal treasures come alive.
           </p>        
