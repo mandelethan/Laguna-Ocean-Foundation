@@ -58,14 +58,23 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="https://givebutter.com/laguna-ocean-foundation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="self-center"
-            >
-              <Button className="bg-[#3a899b] text-white cursor-pointer">Donate</Button>
-            </Link>
+            <div className="w-full flex justify-center">
+              <Link
+                href="https://givebutter.com/laguna-ocean-foundation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-center"
+              >
+                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer mr-3">Donate</Button>
+              </Link>
+              <Link 
+                href="https://www.lagunaoceanfoundation.org/volunteering" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer">Volunteer</Button>
+              </Link>
+            </div>
           </div>
         </SheetContent>
       </Sheet>

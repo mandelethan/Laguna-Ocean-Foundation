@@ -81,11 +81,11 @@ function Locations() {
   return (
     <section className="pt-20 relative text-[#19516a]">
       {/* Laguna Beach map */}
-      <div className="relative h-[600px] flex items-center justify-center bg-cover bg-center">
+      <div className="relative h-[600px] md:h-[1800px] flex items-center justify-center bg-cover bg-center">
         <Image src="/locations/laguna-map.png" alt="Map Picture" layout="fill" objectFit="cover" />
       </div>
       {/* Waves */}
-      <div className="relative h-[200px] md:h-[400px] lg:h-[600px] bg-cover bg-center">
+      <div className="relative h-[200px] md:h-[400px] lg:h-[450px] bg-cover bg-center">
         <Image src="/locations/Waves.png" alt="Waves" layout="fill" objectFit="cover" />
       </div>
 

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 function PlanYourTrip() {
   return (
-    <section className="pt-20 bg-white text-gray-800 font-['Nunito_Sans'] text-lg leading-relaxed">
+    <section className="pt-20 bg-white text-gray-800 text-lg leading-relaxed">
       {/* Hero + Page Break */}
       <div className="relative w-full">
         <Image 
@@ -15,15 +15,6 @@ function PlanYourTrip() {
           width={600}
           height={600}
         />
-        <div className="-mt-1 w-full overflow-hidden">
-          <Image 
-            src="/plan your trip/page_break-removebg-preview.png" 
-            alt="page break cloud shape"
-            className="w-full h-auto object-cover block"
-            width={600}
-            height={600}
-          />
-        </div>
       </div>
 
       {/* Plan Your Trip Section */}
