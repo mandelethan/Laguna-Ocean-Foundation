@@ -25,6 +25,42 @@
         "/species/birds/brandts-cormorant/2.jpg",
         "/species/birds/brandts-cormorant/3.jpg"
     ]
+  },
+  {
+    "commonName": "Pelagic Cormorant",
+    "scientificName": "Urile pelagicus",
+    "images": [
+      "/species/birds/palegic-cormorant/1.jpg",
+      "/species/birds/palegic-cormorant/2.jpg",
+      "/species/birds/palegic-cormorant/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Surf Scoter",
+    "scientificName": "Melanitta perspicillata",
+    "images": [
+      "/species/birds/surf-scoter/1.jpg",
+      "/species/birds/surf-scoter/2.jpg",
+      "/species/birds/surf-scoter/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Western Grebe",
+    "scientificName": "Aechmophorus occidentalis",
+    "images": [
+      "/species/birds/western-grebe/1.jpg",
+      "/species/birds/western-grebe/2.jpg",
+      "/species/birds/western-grebe/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Herring Gull",
+    "scientificName": "Larus smithsonianus",
+    "images": [
+      "/species/birds/herring-gull/1.jpg",
+      "/species/birds/herring-gull/2.jpeg",
+      "/species/birds/herring-gull/3.jpg"
+    ]
   }
 ]
   
