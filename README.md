@@ -6,6 +6,7 @@
 3. CD into "tidepool-explorer"
 4. Run "npm install"
 5. Run "npm run dev" to run the website locally
+
 *Since the website is deployed on Vercel, run "npm run build" to see if there's any compile errors before pushing to main*
 
 Tech stack: NextJS, Tailwind CSS, Typescript, and ShadCN (component library)
