@@ -11,7 +11,7 @@
 
 Tech stack: NextJS, Tailwind CSS, Typescript, and ShadCN (component library)
 
-Deployed on Vercel: https://laguna-ocean-foundation.vercel.app/
+Deployed on Vercel: [Tidepool Explorer](https://laguna-ocean-foundation.vercel.app/)
 
 ## Project structure:
 Uses React's file-based routing for app navigation
