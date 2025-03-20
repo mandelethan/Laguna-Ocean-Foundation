@@ -61,6 +61,141 @@
       "/species/birds/herring-gull/2.jpeg",
       "/species/birds/herring-gull/3.jpg"
     ]
+  },
+  {
+    "commonName": "Osprey",
+    "scientificName": "Pandion haliaetus",
+    "images": [
+      "/species/birds/osprey/1.jpg",
+      "/species/birds/osprey/2.jpg",
+      "/species/birds/osprey/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Least Sandpiper",
+    "scientificName": "Calidris minutilla",
+    "images": [
+      "/species/birds/least-sandpiper/1.jpg",
+      "/species/birds/least-sandpiper/2.jpg",
+      "/species/birds/least-sandpiper/3.jpeg"
+    ]
+  },
+  {
+    "commonName": "Surfbird",
+    "scientificName": "Calidris virgata",
+    "images": [
+      "/species/birds/surfbird/1.jpg",
+      "/species/birds/surfbird/2.jpg",
+      "/species/birds/surfbird/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Black Oystercatcher",
+    "scientificName": "Haematopus bachmani",
+    "images": [
+      "/species/birds/black-oystercatcher/1.jpg",
+      "/species/birds/black-oystercatcher/2.jpeg",
+      "/species/birds/black-oystercatcher/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Snowy Plover",
+    "scientificName": "Anarhynchus nivosus",
+    "images": [
+      "/species/birds/snowy-plover/1.jpg",
+      "/species/birds/snowy-plover/2.jpg",
+      "/species/birds/snowy-plover/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Willet",
+    "scientificName": "Tringa semipalmata",
+    "images": [
+      "/species/birds/willet/1.jpg",
+      "/species/birds/willet/2.jpg",
+      "/species/birds/willet/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Whimbrel",
+    "scientificName": "Numenius phaeopus",
+    "images": [
+      "/species/birds/whimbrel/1.jpg",
+      "/species/birds/whimbrel/2.jpeg",
+      "/species/birds/whimbrel/3.JPG"
+    ]
+  },
+  {
+    "commonName": "Sanderling",
+    "scientificName": "Calidris alba",
+    "images": [
+      "/species/birds/sanderling/1.jpg",
+      "/species/birds/sanderling/2.jpg",
+      "/species/birds/sanderling/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Black Turnstone",
+    "scientificName": "Arenaria melanocephala",
+    "images": [
+      "/species/birds/black-turnstone/1.jpg",
+      "/species/birds/black-turnstone/2.jpg",
+      "/species/birds/black-turnstone/3.jpeg"
+    ]
+  },
+  {
+    "commonName": "Caspian Tern",
+    "scientificName": "Hydroprogne caspia",
+    "images": [
+      "/species/birds/caspian-tern/1.jpg",
+      "/species/birds/caspian-tern/2.jpg",
+      "/species/birds/caspian-tern/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Elegant Tern",
+    "scientificName": "Thalasseus elegans",
+    "images": [
+      "/species/birds/elegant-tern/1.jpg",
+      "/species/birds/elegant-tern/2.jpg",
+      "/species/birds/elegant-tern/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Royal Tern",
+    "scientificName": "Thalasseus maximus",
+    "images": [
+      "/species/birds/royal-tern/1.jpeg",
+      "/species/birds/royal-tern/2.jpg",
+      "/species/birds/royal-tern/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Western Gull",
+    "scientificName": "Larus occidentalis",
+    "images": [
+      "/species/birds/western-gull/1.jpg",
+      "/species/birds/western-gull/2.jpg",
+      "/species/birds/western-gull/3.jpg"
+    ]
+  },
+  {
+    "commonName": "California Gull",
+    "scientificName": "Larus californicus",
+    "images": [
+      "/species/birds/california-gull/1.jpg",
+      "/species/birds/california-gull/2.jpg",
+      "/species/birds/california-gull/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Heermann’s Gull",
+    "scientificName": "Larus heermanni",
+    "images": [
+      "/species/birds/heermanns-gull/1.jpg",
+      "/species/birds/heermanns-gull/2.jpg",
+      "/species/birds/heermanns-gull/3.jpg"
+    ]
   }
 ]
   
