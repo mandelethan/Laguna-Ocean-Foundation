@@ -1,0 +1,30 @@
+[
+  {
+    "commonName": "Bat Star",
+    "scientificName": "Patiria miniata",
+    "images": [
+        "/species/invertebrates-and-bony-fish/bat-star/1.jpg",
+        "/species/invertebrates-and-bony-fish/bat-star/2.jpg",
+        "/species/invertebrates-and-bony-fish/bat-star/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Knobby Sea Star",
+    "scientificName": "Pisaster giganteus",
+    "images": [
+        "/species/invertebrates-and-bony-fish/knobby-sea-star/1.jpeg",
+        "/species/invertebrates-and-bony-fish/knobby-sea-star/2.jpg",
+        "/species/invertebrates-and-bony-fish/knobby-sea-star/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Brittle Star",
+    "scientificName": "Ophiuroidea",
+    "images": [
+        "/species/invertebrates-and-bony-fish/brittle-star/1.jpg",
+        "/species/invertebrates-and-bony-fish/brittle-star/2.jpg"
+    ]
+  }
+]
+  
+  

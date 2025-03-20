@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Crescent Bay (North and South)",
+    "overview": "Crescent Bay is known for its abundant marine life, including bat, ochre, and brittle stars, anemones, shore and hermit crabs, chitons, limpets, mussels, and barnacles. Occasionally, octopuses or spiny lobsters may be spotted. The area is also frequented by osprey, with occasional sightings of dolphins, seals, and sea lions.",
+    "accessibility": [
+      "North: Advanced",
+      "South: Moderate"
+    ],
+    "coordinates": [
+      "North: 33°32'46\"N 117°48'12\"W", 
+      "South: 33°32'43\"N 117°48'01\"W"
+    ],
+    "accessPoint": "Stairs at corner of Circle Way or ramp at Cliff Dr. & Circle Way intersection",
+    "parking": "Residential parking or Trolley Stop at Cliff Drive and Marine Drive intersection",
+    "image": "/locations/Crescent-Bay.jpg"
+  },
+  {
+    "name": "Goff Island",
+    "overview": "Goff Island is known for great snorkeling and scuba diving thanks to the protection from the rocks. While the tidepools may not be as abundant with life like it’s partnering tidepool location, Treasure Island, you may still see anemones, urchins, sea stars, opaleye, and sculpin. If you’re extra lucky, one of the resident harbor seals may be sunbathing nearby. If so, please remember to stay back at least 150ft.",
+    "accessibility": ["Moderate"],
+    "coordinates": [
+      "33°30'49\"N 117°45'37\"W"
+    ],
+    "accessPoint": "From ramp at the end of Treasure Island Park trail",
+    "parking": "Lot 7 and Lot 8 or metered parking on Wesley Drive",
+    "image": "/locations/Goff Island.jpg"
+  },
+  {
+    "name": "Heisler Park",
+    "overview": "Heisler Park is a popular spot for nudibranch hunting and is known for its diverse marine life, including chitons, Christmas tree worms, anemones, California sea hares (seasonally), hermit crabs, and shore crabs. Spiny lobsters and octopuses are occasionally seen, as well as nudibranchs and navanax. The nearby Bird Rock attracts many gulls, cormorants, and other shorebirds. Seals, sea lions, dolphins, and occasionally whales are also spotted in the area.",
+    "accessibility": ["Beginner"],
+    "coordinates": [
+      "33°32'33\"N 117°47'20\"W"
+    ],
+    "accessPoint": "Stairs in front of Las Brisas or walk along Main Beach",
+    "parking": "Metered parking along Cliff Drive",
+    "image": "/locations/Heisler Park.png"
+  },
+  {
+    "name": "Shaws Cove (North and South)",
+    "overview": "Shaws Cove is known for some great rocky structures and deep crevices for octopus hiding spots. Shaws south is an easy to access, flat mussel bed that can be a good place to find sea stars during low tide and watch various shore birds as they feed in the mussel beds. There are also many species of anemones that can be found at both north and south locations.",
+    "accessibility": [
+      "North: Moderate to Advanced",
+      "South: Beginner to Moderate"
+    ],
+    "coordinates": [
+      "North: 33°32'42\"N 117°47'57\"W",
+      "South: 33°32'41\"N 117°47'49\"W"
+    ],
+    "accessPoint": "Stairs at Fairview St. & Cliff Dr.",
+    "parking": "Residential parking or Trolley Stop at Cliff Drive and Fairview Street Intersection",
+    "image": "/locations/Shaws-Cove.jpg"
+  },
+  {
+    "name": "Treasure Island",
+    "overview": "Treasure Island is home to a variety of marine life, including garibaldi, ochre sea stars, purple urchins, octopuses, shore and hermit crabs, wavy turban snails, and Norris' top snails. Large mussel beds support various barnacles, as well. Seals are commonly visible from the island, and leopard sharks are frequently seen at the nearby beach.",
+    "accessibility": ["Beginner"],
+    "coordinates": [
+      "33°30'48\"N 117°45'28\"W"
+    ],
+    "accessPoint": "Stairs or ramp along Treasure Island Park trail",
+    "parking": "Lot 7 and Lot 8 or metered parking on Wesley Drive",
+    "image": "/locations/Treasure Island.png"
+  },
+  {
+    "name": "Wood's Cove",
+    "overview": "Woods Cove has easy beach access via stairs and is a popular spot for swimmers, snorkelers, and SCUBA divers. The rocky tidepools aren’t as accessible and they occupy a smaller area, but you may find some urchins and anemones during a low tide.",
+    "accessibility": ["Advanced"],
+    "coordinates": [
+      "33°31'35\"N 117°46'14\"W"
+    ],
+    "accessPoint": "Diamond St. or Pearl St.",
+    "parking": "Trolley Stop at PCH and Diamond Street Intersection or nearby metered parking",
+    "image": "/locations/Woods-Cove.jpg"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+      "commonName": "Brown Pelican",
+      "scientificName": "Pelecanus occidentalis",
+      "images": [
+          "/species/birds/brown-pelican/1.jpg",
+          "/species/birds/brown-pelican/2.jpg",
+          "/species/birds/brown-pelican/3.jpg"
+      ]
+  },
+  {
+    "commonName": "Double-crested Cormorant",
+    "scientificName": "Nannopterum auritum",
+    "images": [
+        "/species/birds/double-crested-cormorant/1.jpg",
+        "/species/birds/double-crested-cormorant/2.jpeg",
+        "/species/birds/double-crested-cormorant/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Brandt’s Cormorant",
+    "scientificName": "Urile penicillatus",
+    "images": [
+        "/species/birds/brandts-cormorant/1.jpeg",
+        "/species/birds/brandts-cormorant/2.jpg",
+        "/species/birds/brandts-cormorant/3.jpg"
+    ]
+  }
+]
+  
+  

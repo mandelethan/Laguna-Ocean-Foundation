@@ -1,0 +1,31 @@
+[
+  {
+    "commonName": "Devil Weed",
+    "scientificName": "Sargassum horneri",
+    "images": [
+        "/species/invasive/devil-weed/1.jpeg",
+        "/species/invasive/devil-weed/2.jpeg",
+        "/species/invasive/devil-weed/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Japanese Wireweed",
+    "scientificName": "Sargassum muticum",
+    "images": [
+        "/species/invasive/japanese-wireweed/1.jpg",
+        "/species/invasive/japanese-wireweed/2.jpg",
+        "/species/invasive/japanese-wireweed/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Wakame",
+    "scientificName": "Undaria pinnatifida",
+    "images": [
+        "/species/invasive/wakame/1.jpeg",
+        "/species/invasive/wakame/2.jpeg",
+        "/species/invasive/wakame/3.jpg"
+    ]
+  }
+]
+  
+  

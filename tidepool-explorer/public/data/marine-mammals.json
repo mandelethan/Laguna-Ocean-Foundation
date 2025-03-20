@@ -1,0 +1,30 @@
+[
+  {
+    "commonName": "California Sea Lion",
+    "scientificName": "Zalophus californianus",
+    "images": [
+        "/species/marine-mammals/california-sea-lion/1.jpg",
+        "/species/marine-mammals/california-sea-lion/2.jpg",
+        "/species/marine-mammals/california-sea-lion/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Harbor Seal",
+    "scientificName": "Phoca vitulina",
+    "images": [
+        "/species/marine-mammals/harbor-seal/1.JPG",
+        "/species/marine-mammals/harbor-seal/2.JPG",
+        "/species/marine-mammals/harbor-seal/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Bottlenose Dolphin",
+    "scientificName": "Tursiops truncatus",
+    "images": [
+        "/species/marine-mammals/bottlenose-dolphin/1.jpg",
+        "/species/marine-mammals/bottlenose-dolphin/2.jpg"
+    ]
+  }
+]
+  
+  

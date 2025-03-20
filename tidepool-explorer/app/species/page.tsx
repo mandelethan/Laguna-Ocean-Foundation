@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Card,
@@ -21,131 +21,69 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-interface SpeciesItem {
+interface Species {
   commonName: string;
   scientificName: string;
   images: string[];
 }
 
-const speciesData = {
-  "birds": [
-    {
-      commonName: "Brown Pelican",
-      scientificName: "Pelecanus occidentalis",
-      images: [
-        "/species/birds/brown-pelican/1.jpg",
-        "/species/birds/brown-pelican/2.jpg",
-        "/species/birds/brown-pelican/3.jpg",
-      ],
-    },
-    {
-      commonName: "Double-crested Cormorant",
-      scientificName: "Nannopterum auritum",
-      images: [
-        "/species/birds/double-crested-cormorant/1.jpg",
-        "/species/birds/double-crested-cormorant/2.jpeg",
-        "/species/birds/double-crested-cormorant/3.jpg",
-      ],
-    },
-    {
-      commonName: "Brandt’s Cormorant",
-      scientificName: "Urile penicillatus",
-      images: [
-        "/species/birds/brandts-cormorant/1.jpeg",
-        "/species/birds/brandts-cormorant/2.jpg",
-        "/species/birds/brandts-cormorant/3.jpg",
-      ],
-    },
-  ],
-  "marine-mammals": [
-    {
-      commonName: "California Sea Lion",
-      scientificName: "Zalophus californianus",
-      images: [
-        "/species/marine-mammals/california-sea-lion/1.jpg",
-        "/species/marine-mammals/california-sea-lion/2.jpg",
-        "/species/marine-mammals/california-sea-lion/3.jpg"
-      ],
-    },
-    {
-      commonName: "Harbor Seal",
-      scientificName: "Phoca vitulina",
-      images: [
-        "/species/marine-mammals/harbor-seal/1.JPG",
-        "/species/marine-mammals/harbor-seal/2.JPG",
-        "/species/marine-mammals/harbor-seal/3.jpg"
-      ],
-    },
-    {
-      commonName: "Bottlenose Dolphin",
-      scientificName: "Tursiops truncatus",
-      images: [
-        "/species/marine-mammals/bottlenose-dolphin/1.jpg",
-        "/species/marine-mammals/bottlenose-dolphin/2.jpg",
-      ],
-    },
-  ],
-  "invertebrates-and-bony-fish": [
-    {
-      commonName: "Bat Star",
-      scientificName: "Patiria miniata",
-      images: [
-        "/species/invertebrates-and-bony-fish/bat-star/1.jpg",
-        "/species/invertebrates-and-bony-fish/bat-star/2.jpg",
-        "/species/invertebrates-and-bony-fish/bat-star/3.jpg"
-      ],
-    },
-    {
-      commonName: "Knobby Sea Star",
-      scientificName: "Pisaster giganteus",
-      images: [
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/1.jpeg",
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/2.jpg",
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/3.jpg",
-      ],
-    },
-    {
-      commonName: "Brittle Star",
-      scientificName: "Ophiuroidea",
-      images: [
-        "/species/invertebrates-and-bony-fish/brittle-star/1.jpg",
-        "/species/invertebrates-and-bony-fish/brittle-star/2.jpg",
-      ],
-    },
-  ],
-  "invasive-species": [
-    {
-      commonName: "Devil Weed",
-      scientificName: "Sargassum horneri",
-      images: [
-        "/species/invasive/devil-weed/1.jpeg",
-        "/species/invasive/devil-weed/2.jpeg",
-        "/species/invasive/devil-weed/3.jpg",
-      ],
-    },
-    {
-      commonName: "Japanese Wireweed",
-      scientificName: "Sargassum muticum",
-      images: [
-        "/species/invasive/japanese-wireweed/1.jpg",
-        "/species/invasive/japanese-wireweed/2.jpg",
-        "/species/invasive/japanese-wireweed/3.jpg",
-      ],
-    },
-    {
-      commonName: "Wakame",
-      scientificName: "Undaria pinnatifida",
-      images: [
-        "/species/invasive/wakame/1.jpeg",
-        "/species/invasive/wakame/2.jpeg",
-        "/species/invasive/wakame/3.jpg",
-      ],
-    },
-  ],
-};
-
 function Species() {
-  const [selectedSpecies, setSelectedSpecies] = useState<SpeciesItem | null>(null);
+  const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
+   // Define a state for all species data
+   const [speciesData, setSpeciesData] = useState<{
+    birds: Species[];
+    marineMammals: Species[];
+    invertebratesAndBonyFish: Species[];
+    invasiveSpecies: Species[];
+  }>({
+    birds: [],
+    marineMammals: [],
+    invertebratesAndBonyFish: [],
+    invasiveSpecies: [],
+  });
+
+  // Fetch and update data for each species category
+  useEffect(() => {
+    fetch("/data/birds.json")
+      .then((res) => res.json())
+      .then((data: Species[]) => {
+        setSpeciesData((prevData) => ({
+          ...prevData,
+          birds: data,
+        }));
+      })
+      .catch((error) => console.error("Error fetching birds data:", error));
+
+    fetch("/data/marine-mammals.json")
+      .then((res) => res.json())
+      .then((data: Species[]) => {
+        setSpeciesData((prevData) => ({
+          ...prevData,
+          marineMammals: data,
+        }));
+      })
+      .catch((error) => console.error("Error fetching marine mammals data:", error));
+
+    fetch("/data/invertebrates-and-bony-fish.json")
+      .then((res) => res.json())
+      .then((data: Species[]) => {
+        setSpeciesData((prevData) => ({
+          ...prevData,
+          invertebratesAndBonyFish: data,
+        }));
+      })
+      .catch((error) => console.error("Error fetching invertebrates and bony fish data:", error));
+
+    fetch("/data/invasive-species.json")
+      .then((res) => res.json())
+      .then((data: Species[]) => {
+        setSpeciesData((prevData) => ({
+          ...prevData,
+          invasiveSpecies: data,
+        }));
+      })
+      .catch((error) => console.error("Error fetching invasive species data:", error));
+  }, []);
 
   return (
     <section className="pt-20 bg-[#19516a] min-h-screen">
@@ -159,9 +97,9 @@ function Species() {
         {/* Hardcoded Tab Navigation */}
         <TabsList className="grid w-full h-auto grid-cols-4 gap-2 mb-5 md:mb-0 bg-blue-100">
           <TabsTrigger value="birds" className="whitespace-normal text-center">Birds</TabsTrigger>
-          <TabsTrigger value="marine-mammals" className="whitespace-normal text-center">Marine Mammals</TabsTrigger>
-          <TabsTrigger value="invertebrates-and-bony-fish" className="whitespace-normal text-center">Invertebrates and Bony Fish</TabsTrigger>
-          <TabsTrigger value="invasive-species" className="whitespace-normal text-center">Invasive Species</TabsTrigger>
+          <TabsTrigger value="marineMammals" className="whitespace-normal text-center">Marine Mammals</TabsTrigger>
+          <TabsTrigger value="invertebratesAndBonyFish" className="whitespace-normal text-center">Invertebrates and Bony Fish</TabsTrigger>
+          <TabsTrigger value="invasiveSpecies" className="whitespace-normal text-center">Invasive Species</TabsTrigger>
         </TabsList>
 
         {/* Tab Content */}
