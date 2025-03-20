@@ -3,28 +3,160 @@
     "commonName": "Bat Star",
     "scientificName": "Patiria miniata",
     "images": [
-        "/species/invertebrates-and-bony-fish/bat-star/1.jpg",
-        "/species/invertebrates-and-bony-fish/bat-star/2.jpg",
-        "/species/invertebrates-and-bony-fish/bat-star/3.jpg"
+      "/species/invertebrates-and-bony-fish/bat-star/1.jpg",
+      "/species/invertebrates-and-bony-fish/bat-star/2.jpg",
+      "/species/invertebrates-and-bony-fish/bat-star/3.jpg"
     ]
   },
   {
     "commonName": "Knobby Sea Star",
     "scientificName": "Pisaster giganteus",
     "images": [
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/1.jpeg",
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/2.jpg",
-        "/species/invertebrates-and-bony-fish/knobby-sea-star/3.jpg"
+      "/species/invertebrates-and-bony-fish/knobby-sea-star/1.jpeg",
+      "/species/invertebrates-and-bony-fish/knobby-sea-star/2.jpg",
+      "/species/invertebrates-and-bony-fish/knobby-sea-star/3.jpg"
     ]
   },
   {
     "commonName": "Brittle Star",
     "scientificName": "Ophiuroidea",
     "images": [
-        "/species/invertebrates-and-bony-fish/brittle-star/1.jpg",
-        "/species/invertebrates-and-bony-fish/brittle-star/2.jpg"
+      "/species/invertebrates-and-bony-fish/brittle-star/1.jpg",
+      "/species/invertebrates-and-bony-fish/brittle-star/2.jpg"
+    ]
+  },
+  {
+    "commonName": "Ochre Sea Star Pisaster",
+    "scientificName": "ochraceus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/ochre-sea-star-pisaster/1.JPG",
+      "/species/invertebrates-and-bony-fish/ochre-sea-star-pisaster/2.JPG",
+      "/species/invertebrates-and-bony-fish/ochre-sea-star-pisaster/3.jpeg"
+    ]
+  },
+  {
+    "commonName": "Purple Sea Urchin",
+    "scientificName": "Strongylocentrotus purpuratus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/purple-sea-urchin/2.jpg",
+      "/species/invertebrates-and-bony-fish/purple-sea-urchin/1.jpg",
+      "/species/invertebrates-and-bony-fish/purple-sea-urchin/3.JPG"
+    ]
+  },
+  {
+    "commonName": "Red Sea Urchin",
+    "scientificName": "Mesocentrotus franciscanus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/red-sea-urchin/1.jpg",
+      "/species/invertebrates-and-bony-fish/red-sea-urchin/2.jpg",
+      "/species/invertebrates-and-bony-fish/red-sea-urchin/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Abalone",
+    "scientificName": "Haliotis",
+    "images": [
+      "/species/invertebrates-and-bony-fish/abalone/1.jpeg",
+      "/species/invertebrates-and-bony-fish/abalone/2.jpg",
+      "/species/invertebrates-and-bony-fish/abalone/3.JPG"
+    ]
+  },
+  {
+    "commonName": "Spiny California Lobster",
+    "scientificName": "Panulirus interruptus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/spiny-california-lobster/1.jpg",
+      "/species/invertebrates-and-bony-fish/spiny-california-lobster/2.jpeg",
+      "/species/invertebrates-and-bony-fish/spiny-california-lobster/3.jpeg"
+    ]
+  },
+  {
+    "commonName": "California Two-spot Octopus",
+    "scientificName": "Octopus bimaculoides",
+    "images": [
+      "/species/invertebrates-and-bony-fish/california-two-spot-octopus/1.jpg",
+      "/species/invertebrates-and-bony-fish/california-two-spot-octopus/2.jpg",
+      "/species/invertebrates-and-bony-fish/california-two-spot-octopus/3.jpg"
+    ]
+  },
+  {
+    "commonName": "California Sea Hare",
+    "scientificName": "Aplysia californica",
+    "images": [
+      "/species/invertebrates-and-bony-fish/california-sea-hare/1.jpg",
+      "/species/invertebrates-and-bony-fish/california-sea-hare/2.jpg",
+      "/species/invertebrates-and-bony-fish/california-sea-hare/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Spanish Shawl",
+    "scientificName": "Flabellinopsis iodinea",
+    "images": [
+      "/species/invertebrates-and-bony-fish/spanish-shawl/1.jpeg",
+      "/species/invertebrates-and-bony-fish/spanish-shawl/2.jpg",
+      "/species/invertebrates-and-bony-fish/spanish-shawl/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Hopkins Rose",
+    "scientificName": "Ceratodoris rosacea",
+    "images": [
+      "/species/invertebrates-and-bony-fish/hopkins-rose/1.jpg",
+      "/species/invertebrates-and-bony-fish/hopkins-rose/2.jpg",
+      "/species/invertebrates-and-bony-fish/hopkins-rose/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Red Sponge Dorid",
+    "scientificName": "Rostanga pulchra",
+    "images": [
+      "/species/invertebrates-and-bony-fish/red-sponge-dorid/1.jpg",
+      "/species/invertebrates-and-bony-fish/red-sponge-dorid/2.jpeg",
+      "/species/invertebrates-and-bony-fish/red-sponge-dorid/3.PNG"
+    ]
+  },
+  {
+    "commonName": "Navanax",
+    "scientificName": "Navanax inermis",
+    "images": [
+      "/species/invertebrates-and-bony-fish/navanax/1.jpg",
+      "/species/invertebrates-and-bony-fish/navanax/2.jpg",
+      "/species/invertebrates-and-bony-fish/navanax/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Zebra Perch",
+    "scientificName": "Kyphosus azureus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/zebra-perch/1.jpeg",
+      "/species/invertebrates-and-bony-fish/zebra-perch/2.jpg",
+      "/species/invertebrates-and-bony-fish/zebra-perch/3.jpg"
+    ]
+  },
+  {
+    "commonName": "Opaleye",
+    "scientificName": "Girella nigricans",
+    "images": [
+      "/species/invertebrates-and-bony-fish/opaleye/1.jpg",
+      "/species/invertebrates-and-bony-fish/opaleye/2.jpeg"
+    ]
+  },
+  {
+    "commonName": "Giant Kelpfish",
+    "scientificName": "Heterostichus rostratus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/giant-kelpfish/1.jpg",
+      "/species/invertebrates-and-bony-fish/giant-kelpfish/2.jpeg",
+      "/species/invertebrates-and-bony-fish/giant-kelpfish/3.jpeg"
+    ]
+  },
+  {
+    "commonName": "Tidepool Sculpin",
+    "scientificName": "Oligocottus maculosus",
+    "images": [
+      "/species/invertebrates-and-bony-fish/tidepool-sculpin/1.jpg",
+      "/species/invertebrates-and-bony-fish/tidepool-sculpin/2.jpg",
+      "/species/invertebrates-and-bony-fish/tidepool-sculpin/3.jpg"
     ]
   }
 ]
-  
-  
