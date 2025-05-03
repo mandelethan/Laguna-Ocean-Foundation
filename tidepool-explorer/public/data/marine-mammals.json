@@ -6,7 +6,8 @@
       "/species/marine-mammals/california-sea-lion/1.jpg",
       "/species/marine-mammals/california-sea-lion/2.jpg",
       "/species/marine-mammals/california-sea-lion/3.jpg"
-    ]
+    ],
+    "description": "California Sea Lions are playful, social marine mammals with external ear flaps and strong front flippers. They're often seen lounging on docks or rocks and are known for their loud barks and intelligence."
   },
   {
     "commonName": "Harbor Seal",
@@ -15,7 +16,8 @@
       "/species/marine-mammals/harbor-seal/1.JPG",
       "/species/marine-mammals/harbor-seal/2.JPG",
       "/species/marine-mammals/harbor-seal/3.jpg"
-    ]
+    ],
+    "description": "Harbor seals are earless seals with spotted coats. They are often seen lounging on rocks and beaches and are strong swimmers, capable of diving deep to catch fish and squid."
   },
   {
     "commonName": "Bottlenose Dolphin",
@@ -23,7 +25,8 @@
     "images": [
       "/species/marine-mammals/bottlenose-dolphin/1.jpg",
       "/species/marine-mammals/bottlenose-dolphin/2.jpg"
-    ]
+    ],
+    "description": "The Bottlenose Dolphin is easily identifiable by its distinct face shape with its snout and its gray color. The Bottlenose will come close to shore on many occasions and be spottable from the beach. They work together in herds to farm fish together and use echolocation to locate their food. "
   },
   {
     "commonName": "Common Dolphin",
@@ -32,7 +35,8 @@
       "/species/marine-mammals/common-dolphin/1.jpg",
       "/species/marine-mammals/common-dolphin/2.jpg",
       "/species/marine-mammals/common-dolphin/3.jpg"
-    ]
+    ],
+    "description": "The common dolphin or the short-beaked common dolphin is a gray dolphin with a lighter gray patch from the eye to the stomach. It is one of the most common dolphins seen. They measure less than 6 feet and live approximately 40 years. Common dolphins are social creatures traveling in large groups. "
   },
   {
     "commonName": "Gray Whale",
@@ -41,6 +45,7 @@
       "/species/marine-mammals/gray-whale/1.jpeg",
       "/species/marine-mammals/gray-whale/2.jpg",
       "/species/marine-mammals/gray-whale/3.jpg"
-    ]
+    ],
+    "description": "Gray Whales can grow up to be over 50 feet long and they have gray bodies with small black eyes. Females are typically bigger than males. They are at high risk of getting stuck in fishing nets and when they get stuck they drag themselves along, resulting in fatigue which can lead to death. They are primarily bottom feeders scouring the ocean floor for food and are prayed on by killer whales."
   }
 ]

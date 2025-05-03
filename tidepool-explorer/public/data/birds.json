@@ -6,8 +6,9 @@
           "/species/birds/brown-pelican/1.jpg",
           "/species/birds/brown-pelican/2.jpg",
           "/species/birds/brown-pelican/3.jpg"
-      ]
-  },
+      ],
+      "description": "A large gray-brown bird that lives along the coast. It uses its long bill to scoop up fish into its pouch. They were once on the brink of extinction due to pesticide pollution but have since recovered." 
+    },
   {
     "commonName": "Double-crested Cormorant",
     "scientificName": "Nannopterum auritum",
@@ -15,7 +16,8 @@
         "/species/birds/double-crested-cormorant/1.jpg",
         "/species/birds/double-crested-cormorant/2.jpeg",
         "/species/birds/double-crested-cormorant/3.jpg"
-    ]
+    ],
+    "description": "A bird with an orange face and gray-brown body, like a duck, swims and dives to catch small fish. It is the most common Cormorant in the US and Canada. Unlike duck's waterproof wings, the Cormorant’s wings get wet. To dry, they spread their wings out to dry in the sun."
   },
   {
     "commonName": "Brandt’s Cormorant",
@@ -24,7 +26,8 @@
         "/species/birds/brandts-cormorant/1.jpeg",
         "/species/birds/brandts-cormorant/2.jpg",
         "/species/birds/brandts-cormorant/3.jpg"
-    ]
+    ],
+    "description": "A small bird with a long blue-purple neck and shiny green body, lives on the coast and nests in cliffs. They stick close to the shore. Pelagic Cormorants can dive up to 138 feet to catch fish."
   },
   {
     "commonName": "Pelagic Cormorant",
@@ -33,7 +36,8 @@
       "/species/birds/palegic-cormorant/1.jpg",
       "/species/birds/palegic-cormorant/2.jpg",
       "/species/birds/palegic-cormorant/3.jpg"
-    ]
+    ],
+    "description": " A small bird with a long blue-purple neck and shiny green body, lives on the coast and nests in cliffs. They stick close to the shore. Pelagic Cormorants can dive up to 138 feet to catch fish."
   },
   {
     "commonName": "Surf Scoter",
@@ -42,7 +46,8 @@
       "/species/birds/surf-scoter/1.jpg",
       "/species/birds/surf-scoter/2.jpg",
       "/species/birds/surf-scoter/3.jpg"
-    ]
+    ],
+    "description": "Adult male Surf Scoters are large pitch-black ducks with bright white patches of feathers on their foreheads and nape (back of the neck). Adult females and young males are dark brown with white patches on their cheeks. Often seen with other sea ducks. Their nickname is “old skunkhead” due to their patterning."
   },
   {
     "commonName": "Western Grebe",
@@ -51,7 +56,8 @@
       "/species/birds/western-grebe/1.jpg",
       "/species/birds/western-grebe/2.jpg",
       "/species/birds/western-grebe/3.jpg"
-    ]
+    ],
+    "description": "The Western Grebe is a white and black bird with a narrow long yellow beak and bright red eyes. The top half of its head is black and the other half is white. It builds its home on the water making floating nests out of vegetation. They were once used to make clothes but went out of fashion."
   },
   {
     "commonName": "Herring Gull",
@@ -60,7 +66,8 @@
       "/species/birds/herring-gull/1.jpg",
       "/species/birds/herring-gull/2.jpeg",
       "/species/birds/herring-gull/3.jpg"
-    ]
+    ],
+    "description": "The Herring Gull is the most common gull if you see a “Seagull” high change it is a Herring Gull."
   },
   {
     "commonName": "Osprey",
@@ -69,7 +76,8 @@
       "/species/birds/osprey/1.jpg",
       "/species/birds/osprey/2.jpg",
       "/species/birds/osprey/3.jpg"
-    ]
+    ],
+    "description": "The Osprey is a brown and white raptor. It has a white front (face, stomach, legs), brown wings, a horizontal brown line behind its yellow eyes, and a sharp curved beak and talons. They hunt fish by diving into the water. Osprey has a success rate of 25-70% when catching their prey."
   },
   {
     "commonName": "Least Sandpiper",
@@ -78,7 +86,8 @@
       "/species/birds/least-sandpiper/1.jpg",
       "/species/birds/least-sandpiper/2.jpg",
       "/species/birds/least-sandpiper/3.jpeg"
-    ]
+    ],
+    "description": "The Western Sandpiper is a small white bird with cascading brown wings and a long black bill. The females have longer bills than males and are also generally larger. They can be spotted on the shore looking for food with other shorebirds, and they migrate in massive flocks."
   },
   {
     "commonName": "Surfbird",
@@ -87,7 +96,8 @@
       "/species/birds/surfbird/1.jpg",
       "/species/birds/surfbird/2.jpg",
       "/species/birds/surfbird/3.jpg"
-    ]
+    ],
+    "description": "The surfbird is covered in a brownish-gray plumage with a white underside. They use their black and yellow bills to search for invertebrates along the rocky surfaces where the tide goes out. Because they hang out around rocky areas, they can be hard to blend in with the rocks. Keep a sharp eye out for their yellow legs and bill."
   },
   {
     "commonName": "Black Oystercatcher",
@@ -96,7 +106,8 @@
       "/species/birds/black-oystercatcher/1.jpg",
       "/species/birds/black-oystercatcher/2.jpeg",
       "/species/birds/black-oystercatcher/3.jpg"
-    ]
+    ],
+    "description": "The black oystercatcher is easily spottable with its blackish head, brown body, and bright orange bill. They remain with their partners throughout the entire year, flying in duets. Be careful approaching them as they might get scared, but listen carefully for their unique whistled calls."
   },
   {
     "commonName": "Snowy Plover",
@@ -105,7 +116,8 @@
       "/species/birds/snowy-plover/1.jpg",
       "/species/birds/snowy-plover/2.jpg",
       "/species/birds/snowy-plover/3.jpg"
-    ]
+    ],
+    "description": "The Snowy Plover is a small bird that's light brown above, white under, with small black bills. They are cute little foragers that blend in with the sandy beaches they inhabit. Parent Snowy Plovers will protect their chicks from predators with a signal that will alert the babies to flatten themselves against the ground for protection."
   },
   {
     "commonName": "Willet",
@@ -114,7 +126,8 @@
       "/species/birds/willet/1.jpg",
       "/species/birds/willet/2.jpg",
       "/species/birds/willet/3.jpg"
-    ]
+    ],
+    "description": "The Willet is a large shorebird that comes in a variety of colors and patterns. From gray to brown the most distinct trait of Willets is the black and white strips that come out when they fly. Willets will pretend to have broken wings to bait predators away from their young."
   },
   {
     "commonName": "Whimbrel",
@@ -123,7 +136,8 @@
       "/species/birds/whimbrel/1.jpg",
       "/species/birds/whimbrel/2.jpeg",
       "/species/birds/whimbrel/3.JPG"
-    ]
+    ],
+    "description": "The Whimbrel is brownish with varying shades, and a unique curved black bill with a shade of pink. Their curved bills let them find crabs hiding in the mud. Their genus translated to “new moon” a reference to their curved beaks that are similar to crescent moons."
   },
   {
     "commonName": "Sanderling",
@@ -132,7 +146,8 @@
       "/species/birds/sanderling/1.jpg",
       "/species/birds/sanderling/2.jpg",
       "/species/birds/sanderling/3.jpg"
-    ]
+    ],
+    "description": "The Sanderlings are medium-sized and easily spottable because of their white plumage that contrasts their black legs and small black bills. They tend to run back and forth in sync with the waves. While other shorebirds look for food around the same areas, the Sanderling will dominate these territories with their defensive attitudes. If you can identify a sanderling it's a good stepping stone to figuring out the other shorebirds as well!"
   },
   {
     "commonName": "Black Turnstone",
@@ -141,7 +156,8 @@
       "/species/birds/black-turnstone/1.jpg",
       "/species/birds/black-turnstone/2.jpg",
       "/species/birds/black-turnstone/3.jpeg"
-    ]
+    ],
+    "description": "The Black turnstone is mostly covered in dark brown plumage, similar to the color of the rocks they like to meander about. While they try their best to camouflage… they move around too much, so pay attention to cliffs and other rocky formations and you can spot one. They at times use their body to move clusters of kelp to expose flies and fish eggs to eat."
   },
   {
     "commonName": "Caspian Tern",
@@ -150,7 +166,8 @@
       "/species/birds/caspian-tern/1.jpg",
       "/species/birds/caspian-tern/2.jpg",
       "/species/birds/caspian-tern/3.jpg"
-    ]
+    ],
+    "description": "The Caspian Term is a sleek bird with all-white plumage and a black head, with an orange bill. They are aggressive and will protect their territory from anyone - even humans. "
   },
   {
     "commonName": "Elegant Tern",
@@ -159,7 +176,8 @@
       "/species/birds/elegant-tern/1.jpg",
       "/species/birds/elegant-tern/2.jpg",
       "/species/birds/elegant-tern/3.jpg"
-    ]
+    ],
+    "description": "The Elegant Tern is much sleeker, and you could even say a narrower version of the Caspian Tern. Their main food source is the northern anchovy, and the availability of this food is determined by the ocean current known as “El Nino”."
   },
   {
     "commonName": "Royal Tern",
@@ -168,7 +186,8 @@
       "/species/birds/royal-tern/1.jpeg",
       "/species/birds/royal-tern/2.jpg",
       "/species/birds/royal-tern/3.jpg"
-    ]
+    ],
+    "description": "The Royal Tern is another variant of Terns also mentioned in this field guide. This variant is smaller and much more compact compared to the others. Royal Tern chicks will leave the nest as soon as they hatch and meet up with other chicks. This crown of babies can swell up to thousands."
   },
   {
     "commonName": "Western Gull",
@@ -177,7 +196,8 @@
       "/species/birds/western-gull/1.jpg",
       "/species/birds/western-gull/2.jpg",
       "/species/birds/western-gull/3.jpg"
-    ]
+    ],
+    "description": " The western Gull is a large white bird with black wings and a yellow beak. They are feeders that will eat anything - commonly found looking through trash and stealing food from other animals."
   },
   {
     "commonName": "California Gull",
@@ -186,7 +206,8 @@
       "/species/birds/california-gull/1.jpg",
       "/species/birds/california-gull/2.jpg",
       "/species/birds/california-gull/3.jpg"
-    ]
+    ],
+    "description": "The California gull carries a similar appearance to other gulls, being more towards the medium size. When spotted with other gulls they can be identified by their deep and quick wingbeats ( they flap their wings faster than other gulls ). Also, they have distinct red spots on their beaks."
   },
   {
     "commonName": "Heermann’s Gull",
@@ -195,7 +216,8 @@
       "/species/birds/heermanns-gull/1.jpg",
       "/species/birds/heermanns-gull/2.jpg",
       "/species/birds/heermanns-gull/3.jpg"
-    ]
+    ],
+    "description": "Heerman’s Gulls are easily identifiable compared to other gulls. During breeding, they sport dark gray plumage and a shiny orange bill. They like to harass other birds such as pelicans to steal their food."
   }
 ]
   

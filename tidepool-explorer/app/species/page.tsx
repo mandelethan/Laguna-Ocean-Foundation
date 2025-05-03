@@ -10,6 +10,7 @@ interface Species {
   commonName: string;
   scientificName: string;
   images: string[];
+  description: string;
 }
 
 function Species() {
@@ -198,9 +199,8 @@ function Species() {
             <div className="bg-white p-8 flex flex-row gap-8 rounded-b-lg">
               {/* Description on the left */}
               <div className="flex-1 text-[#19516a] text-lg">
-                <p>
-                  The adult {selectedSpecies.commonName.toLowerCase()} is a common species found in the tide pools. 
-                  It has distinctive features and behaviors that make it interesting to observe in its natural habitat.
+                <p> 
+                  {selectedSpecies.description};
                 </p>
               </div>
               

@@ -6,7 +6,8 @@
         "/species/invasive/devil-weed/1.jpeg",
         "/species/invasive/devil-weed/2.jpeg",
         "/species/invasive/devil-weed/3.jpg"
-    ]
+    ],
+    "description": "Devil weed also known as Siam weed or bitter bush is a highly invasive weed. It has a triangular leaf with triangular edges. The devil weed gets its name from its three main veins that look similar to a pitchfork. Flowering devil weed has purple-white stringy petals and forms in clusters. It rapidly reproduces and creates thick foliage outcompeting native species. They also release toxins into the soil and are toxic to livestock. "
   },
   {
     "commonName": "Japanese Wireweed",
@@ -15,7 +16,8 @@
         "/species/invasive/japanese-wireweed/1.jpg",
         "/species/invasive/japanese-wireweed/2.jpg",
         "/species/invasive/japanese-wireweed/3.jpg"
-    ]
+    ],
+    "description": "The Japanese wireweed or Strangle weed is a large brown-yellow seaweed with long blades and spherical olive-looking bulbs. It grows in shallow waters and can attach to hard surfaces, such as rocks, docks, and boats. Its ability to reproduce quickly has hurt native algae."
   },
   {
     "commonName": "Wakame",
@@ -24,7 +26,8 @@
         "/species/invasive/wakame/1.jpeg",
         "/species/invasive/wakame/2.jpeg",
         "/species/invasive/wakame/3.jpg"
-    ]
+    ],
+    "description": "Wakame or Japanese seaweed is a seaweed with long wavy green-brown fronds attached to a stem. The plant can grow to 3 meters in length. It rapidly grows in dense forests hurting native species."
   }
 ]
   
