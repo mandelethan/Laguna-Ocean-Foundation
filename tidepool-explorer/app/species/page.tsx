@@ -152,8 +152,8 @@ function Species() {
                   height={400}
                   priority={index < 4} // Priority load for visible items
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-4">
-                  <h3 className="text-white text-center font-bold uppercase text-xl px-2">
+                <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
+                  <h3 className="text-white text-center font-bold uppercase text-lg px-2">
                     {item.commonName}
                   </h3>
                 </div>
@@ -200,7 +200,7 @@ function Species() {
               {/* Description on the left */}
               <div className="flex-1 text-[#19516a] text-lg">
                 <p> 
-                  {selectedSpecies.description};
+                  {selectedSpecies.description}
                 </p>
               </div>
               
