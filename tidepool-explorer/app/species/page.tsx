@@ -103,8 +103,10 @@ function Species() {
   };
 
   return (
-    <section className="pt-20 bg-[#19516a] min-h-screen">
-      <div className="flex flex-col text-white text-left mx-8 my-8 relative">
+    <section className="pt-20 bg-[#19516a] min-h-screen flex flex-col">
+  <div className="flex flex-col">
+    <div className="text-white text-left mx-8 mt-8 relative">
+
   {/* Top block: Heading and Dropdown */}
   <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
     <div>
@@ -133,9 +135,10 @@ function Species() {
     </Dropdown>
   </div>
 </div>
+</div>
 
       {/* New species grid with the updated design */}
-      <div className="mx-8 mb-8 p-6 bg-[#5a8baa] rounded-lg">
+      <div className="mx-8 mt-6 mb-8 p-6 bg-[#5a8baa] rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {getFilteredSpecies().length > 0 ? (
             getFilteredSpecies().map((item, index) => (
@@ -170,11 +173,11 @@ function Species() {
         <Dialog open={Boolean(selectedSpecies)} onOpenChange={() => setSelectedSpecies(null)}>
           <DialogContent showClose={false} className="p-0 
                                                       w-full 
-                                                      !max-w-none 
+                                                      !max-w-[90vw]
                                                       sm:!w-[600px] 
                                                       md:!w-[800px] 
-                                                      lg:!w-[1000px] 
-                                                      xl:!w-[1200px] 
+                                                      lg:!w-[800px] 
+                                                      xl:!w-[800px] 
                                                       max-h-screen 
                                                       bg-[#19516a] 
                                                       rounded-lg
@@ -196,45 +199,38 @@ function Species() {
             </div>
             
             {/* Content area with horizontal layout */}
-            <div className="bg-white p-8 flex flex-row gap-8 rounded-b-lg">
-              {/* Description on the left */}
-              <div className="flex-1 text-[#19516a] text-lg">
-                <p> 
-                  {selectedSpecies.description}
-                </p>
-              </div>
-              
-              {/* Image carousel on the right */}
-              <div className="w-[50%] flex flex-col h-full">
-                <Carousel className="w-full flex flex-col items-center">
-                  {/* Keep the image size natural */}
-                  <div className="w-full mb-12">
-                    <CarouselContent>
-                      {selectedSpecies.images.map((img, imgIndex) => (
-                        <CarouselItem key={imgIndex}>
-                          <div className="relative aspect-video w-full">
-                            <Image
-                              src={img}
-                              alt={selectedSpecies.commonName}
-                              className="object-cover rounded-lg"
-                              fill
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                              priority
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                  </div>
+            <div className="bg-white p-6 flex flex-col gap-4 rounded-b-lg">
+  {/* Description on top */}
+  <div className="text-[#19516a] text-base leading-relaxed">
+    <p>{selectedSpecies.description}</p>
+  </div>
 
-                  {/* Arrows after the image */}
-                  <div className="flex justify-between w-full px-2 mt-6">
-                  <CarouselPrevious className="static w-10 h-10" />
-                  <CarouselNext className="static w-10 h-10" />
-                </div>
-                </Carousel>
-              </div>
+  {/* Image carousel below */}
+  <div className="w-full">
+    <Carousel className="w-full flex flex-col items-center">
+      <div className="w-full">
+        <CarouselContent>
+          {selectedSpecies.images.map((img, imgIndex) => (
+            <CarouselItem key={imgIndex} className="flex justify-center">
+            <div className="flex items-center justify-center w-full max-w-[600px] aspect-video bg-white rounded-lg overflow-hidden">
+              <img
+                src={img}
+                alt={selectedSpecies.commonName}
+                className="max-w-full max-h-full rounded-lg"
+              />
             </div>
+          </CarouselItem>
+          ))}
+        </CarouselContent>
+      </div>
+
+      {/* Arrows beside image */}
+      <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
+      <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
+    </Carousel>
+  </div>
+</div>
+
           </DialogContent>
         </Dialog>
       )}
