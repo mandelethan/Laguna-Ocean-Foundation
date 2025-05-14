@@ -53,6 +53,7 @@ function Locations() {
         {/* Subheading */}
         <h2 className="text-3xl font-semibold">All Tidepool Locations</h2>
 
+
         {/* Card Container */}
         <div className="bg-[#36879F] rounded-3xl p-6 md:p-10">
           <Accordion type="single" collapsible className="space-y-10">
