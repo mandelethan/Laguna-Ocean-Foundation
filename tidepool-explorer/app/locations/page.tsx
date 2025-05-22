@@ -63,6 +63,8 @@ function Locations() {
           <Accordion type="single" collapsible className="space-y-10">
             {locations.map((location, index) => {
               const id = location.svgId|| formatId(location.name);
+              const cardId = `card-${id}`; // 🔁 new scroll target ID
+
 
               console.log("Location section ID:", id, "| Original name:", location.name);
               
@@ -71,9 +73,12 @@ function Locations() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  id={id}
                   className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
+
+                  {/* This div is now the actual scroll target */}
+                  <div id={cardId} className="h-1" />
+                  
                   {/* Optimized Image */}
                   <div className="relative h-[250px] md:h-[400px] w-full overflow-hidden">
                     <Image

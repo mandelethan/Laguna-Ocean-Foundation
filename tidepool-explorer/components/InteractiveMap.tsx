@@ -21,31 +21,36 @@ useEffect(() => {
 
 
   // ✅ Attach click listeners to paths once SVG is inserted
-  useEffect(() => {
-    if (!svgContent) return;
+    useEffect(() => {
+      if (!svgContent) return;
 
-    const handleClick = (event: Event) => {
-      const target = event.target as SVGElement;
-      if (target.tagName === "path" && target.id) {
-        const section = document.getElementById(target.id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth", block: "start" });
+      const handleClick = (event: Event) => {
+        const target = event.target as SVGElement;
+        if (target.tagName === "path" && target.id) {
+          const scrollTargetId = `card-${target.id}`;
+          const section = document.getElementById(scrollTargetId);
+
+
+          if (section) {
+            const yOffset = -80;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }
         }
-      }
-    };
+      };
 
-
-    const svgElement = document.getElementById("interactive-map");
-    if (svgElement) {
-      svgElement.addEventListener("click", handleClick);
-    }
-
-    return () => {
+      const svgElement = document.getElementById("interactive-map");
       if (svgElement) {
-        svgElement.removeEventListener("click", handleClick);
+        svgElement.addEventListener("click", handleClick);
       }
-    };
-  }, [svgContent]);
+
+      return () => {
+        if (svgElement) {
+          svgElement.removeEventListener("click", handleClick);
+        }
+      };
+    }, [svgContent]);
+
 
   return (
     <div
