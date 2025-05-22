@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import InteractiveMap from "../../components/InteractiveMap";
 import Image from "next/image";
 import {
   Accordion,
@@ -24,6 +25,7 @@ interface Location {
   accessPoint: string;
   parking: string;
   image: string;
+  svgId?: string;
 }
 
 function Locations() {
@@ -53,12 +55,18 @@ function Locations() {
         {/* Subheading */}
         <h2 className="text-3xl font-semibold">All Tidepool Locations</h2>
 
+        <InteractiveMap />
+
 
         {/* Card Container */}
         <div className="bg-[#36879F] rounded-3xl p-6 md:p-10">
           <Accordion type="single" collapsible className="space-y-10">
             {locations.map((location, index) => {
-              const id = formatId(location.name);
+              const id = location.svgId|| formatId(location.name);
+
+              console.log("Location section ID:", id, "| Original name:", location.name);
+              
+
               return (
                 <AccordionItem
                   key={index}
@@ -142,6 +150,7 @@ function Locations() {
     </section>
   );
 }
+
 
 export default Locations;
 
