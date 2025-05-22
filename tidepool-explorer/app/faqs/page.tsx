@@ -94,8 +94,8 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-[#1C506B] text-white px-6 pt-32 pb-10 md:px-24 md:pt-40 md:pb-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-5">Frequently</h1>
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-10">Asked Questions</h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-white mb-15">Frequently Asked Questions</h1>
+     
 
       <div className="md:grid md:grid-cols-[16rem_1fr] flex flex-col gap-10">
         {/* Sidebar */}
