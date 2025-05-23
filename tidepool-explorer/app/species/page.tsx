@@ -126,34 +126,44 @@ function Species() {
       {isDropdownOpen && (
         <DropdownContent className="w-full lg:w-[450px] bg-white rounded-lg shadow-lg mt-2 z-50 
         relative lg:absolute lg:left-0 lg:top-full border border-gray-200">
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Birds")}>Birds</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Marine Mammals")}>Marine Mammals</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Invertebrates And Bony Fish")}>Invertebrates and Bony Fish</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Invasive Species")}>Invasive Species</button>
+          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Birds")}>Birds</button>
+          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Marine Mammals")}>Marine Mammals</button>
+          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Invertebrates And Bony Fish")}>Invertebrates and Bony Fish</button>
+          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Invasive Species")}>Invasive Species</button>
         </DropdownContent>
       )}
     </Dropdown>
   </div>
 </div>
 </div>
-
       {/* New species grid with the updated design */}
       <div className="mx-8 mt-6 mb-8 p-6 bg-[#5a8baa] rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {getFilteredSpecies().length > 0 ? (
-            getFilteredSpecies().map((item, index) => (
+            getFilteredSpecies()
+            .slice()
+            .sort((a, b) => a.commonName.localeCompare(b.commonName))
+            .map((item, index) => (
               <div
                 key={index}
-                className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition"
+                tabIndex={0}
+                role="button"
                 onClick={() => setSelectedSpecies(item)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedSpecies(item);
+                  }
+                }}
+                className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
               >
                 <Image
                   src={item.images[0]}
                   alt={item.commonName}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover pointer-events-none" // <-- block focus from image
                   width={400}
                   height={400}
-                  priority={index < 4} // Priority load for visible items
+                  priority={index < 4}
                 />
                 <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
                   <h3 className="text-white text-center font-bold uppercase text-lg px-2">
