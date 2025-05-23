@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import { House, Youtube, Instagram, Linkedin } from 'lucide-react';
-import { Button } from './ui/button';
 import Link from 'next/link';
 
 const footerIconResources = [
@@ -28,30 +27,50 @@ const footerIconResources = [
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="flex flex-col items-center w-full bg-[#e3c088] p-6">
-        <h2 className="text-2xl mb-4 text-[#19516a]">Laguna Ocean Foundation</h2>
-        
-        <div className="flex justify-center space-x-4 mb-4 text-black">
-          {footerIconResources.map((resource) => (
-            <Link key={resource.name} href={resource.link} target="_blank" rel="noopener noreferrer">
-              <resource.icon className="w-6 h-6" />
-            </Link>
-          ))}
-        </div>
+    <footer className="bg-[#e3c088] text-[#19516a] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 grid grid-cols-1 md:grid-cols-2 items-center">
+        {/* Left side */}
         <div>
-          <Link href="https://www.lagunaoceanfoundation.org/volunteering" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-[#3a899b] text-white w-24 mr-2 hover:cursor-pointer">
-              Volunteer
-            </Button>
-          </Link>
-          <Link href="https://givebutter.com/laguna-ocean-foundation" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-[#3a899b] text-white w-24 hover:cursor-pointer">
-              Donate
-            </Button>
-          </Link>
+          <h2 className="text-4xl font-semibold">Laguna Ocean Foundation</h2>
+          <p className="mt-2 text-xl">Laguna Beach, CA</p>
         </div>
-        <h3 className="mt-4 text-lg text-[#19516a]">Laguna Beach, CA</h3>
+
+        {/* Right side */}
+        <div className="flex flex-col items-end text-right space-y-4">
+          {/* Stacked text links */}
+          <div className="flex flex-col text-lg font-medium underline space-y-1">
+            <Link
+              href="https://www.lagunaoceanfoundation.org/volunteering"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              Volunteer
+            </Link>
+            <Link
+              href="https://givebutter.com/laguna-ocean-foundation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              Donate
+            </Link>
+          </div>
+
+          {/* Social icons */}
+          <div className="flex space-x-4">
+            {footerIconResources.map((resource) => (
+              <Link
+                key={resource.name}
+                href={resource.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <resource.icon className="w-6 h-6 hover:opacity-80 transition-opacity" />
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );
