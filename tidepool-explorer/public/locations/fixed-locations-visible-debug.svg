@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+  <style>
+    path {
+      fill: rgba(255, 0, 0, 0.3) !important;          /* RED fill for visibility */
+      stroke: #FFD700 !important;                    /* Yellow stroke */
+      stroke-width: 20 !important;                   /* Huge stroke width */
+      filter: drop-shadow(0 0 12px lime) !important; /* Glow effect */
+      cursor: pointer;
+    }
+  </style>
+
 <svg fill="none" height="5092" viewBox="0 0 4792 5092" width="4792" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="fixed-locations">
 <rect fill="url(#pattern0_457_153)" height="5092" id="Untitled_Artwork 23 1" width="4792"/>

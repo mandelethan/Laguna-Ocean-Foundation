@@ -26,10 +26,13 @@ interface Location {
   parking: string;
   image: string;
   svgId?: string;
+  
 }
 
 function Locations() {
   const [locations, setLocations] = useState<Location[]>([]);
+const [expandedCard, setExpandedCard] = useState<string | undefined>(undefined);
+
 
   useEffect(() => {
     fetch("/data/locations.json")
@@ -55,24 +58,30 @@ function Locations() {
         {/* Subheading */}
         <h2 className="text-3xl font-semibold">All Tidepool Locations</h2>
 
-        <InteractiveMap />
-
+        <InteractiveMap
+          onLocationClick={(id) => {
+            console.log("Received location ID in Locations.tsx:", id);
+            setExpandedCard(id);
+          }}
+        />
 
         {/* Card Container */}
         <div className="bg-[#36879F] rounded-3xl p-6 md:p-10">
-          <Accordion type="single" collapsible className="space-y-10">
+          <Accordion
+            type="single"
+            collapsible
+            value={expandedCard}
+            onValueChange={setExpandedCard}
+            className="space-y-10"
+          >
             {locations.map((location, index) => {
               const id = location.svgId|| formatId(location.name);
-              const cardId = `card-${id}`; // 🔁 new scroll target ID
-
-
-              console.log("Location section ID:", id, "| Original name:", location.name);
-              
+              const cardId = `card-${id}`; // 🔁 new scroll target ID              
 
               return (
                 <AccordionItem
                   key={index}
-                  value={`item-${index}`}
+                  value={id}
                   className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                 >
 
