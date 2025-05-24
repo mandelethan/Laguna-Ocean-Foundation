@@ -74,38 +74,38 @@ function PlanYourTrip() {
         </div>
       </div>
 
-    {/* MPA Section - Deep Blue */}
-    <div className="bg-[#4A899C] px-6 py-20 text-white">
-      <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
-        {/* Text + Button Column */}
-        <div className="flex flex-col justify-between h-full text-left flex-1">
-          <div>
-            <h2 className="text-[36px] font-bold text-white mb-4">Marine Protected Areas</h2>
-            <p className="mb-6">
-              MPAs safeguard vital ocean ecosystems, ensuring the health of marine life and habitats like tide pools.
-              These protected zones help preserve biodiversity, support sustainable fisheries, and maintain the delicate balance of coastal environments.
-              By respecting MPAs, we contribute to the long-term health of our oceans and the incredible species that call them home.
-            </p>
+      {/* MPA Section - Deep Blue */}
+      <div className="bg-[#4A899C] px-6 py-20 text-white">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
+          {/* Text + Button Column aligned to image height */}
+          <div className="flex flex-col justify-between h-[350px] text-left flex-1">
+            <div>
+              <h2 className="text-[36px] font-bold mb-4">Marine Protected Areas</h2>
+              <p>
+                MPAs safeguard vital ocean ecosystems, ensuring the health of marine life and habitats like tide pools.
+                These protected zones help preserve biodiversity, support sustainable fisheries, and maintain the delicate balance of coastal environments.
+                By respecting MPAs, we contribute to the long-term health of our oceans and the incredible species that call them home.
+              </p>
+            </div>
+            <Link href="/mpa-rules">
+              <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition mt-6">
+                View MPA Guide →
+              </button>
+            </Link>
           </div>
-          <Link href="/mpa-rules">
-            <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
-              View MPA Guide →
-            </button>
-          </Link>
-        </div>
 
-        {/* Right Side Image */}
-        <div className="flex-1 max-w-[500px]">
-          <Image
-            src="/plan your trip/moss-cove-laguna-beach.jpg"
-            alt="MPA sign at beach"
-            className="rounded-xl shadow-md w-full h-auto object-cover"
-            width={500}
-            height={350}
-          />
+          {/* Right Side Image */}
+          <div className="flex-1 max-w-[500px]">
+            <Image
+              src="/plan your trip/moss-cove-laguna-beach.jpg"
+              alt="MPA sign at beach"
+              className="rounded-xl shadow-md w-full h-auto object-cover"
+              width={500}
+              height={350}
+            />
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 }
