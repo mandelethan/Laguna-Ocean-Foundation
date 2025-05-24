@@ -9,15 +9,13 @@ function PlanYourTrip() {
     <section className="text-gray-800 text-lg leading-relaxed">
       {/* Tide Chart Section - White */}
       <div className="bg-white px-6 pt-32 pb-12">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1200px] mx-auto">
           <h1 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Tidepool Charts</h1>
-          <p className="mb-10 text-left text-gray-800 leading-relaxed max-w-[900px]">
+          <p className="mb-10 text-left text-gray-800 leading-relaxed">
             Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
           </p>
 
-          {/* Chart + Image Row */}
-          <div className="flex flex-col lg:flex-row items-start gap-16 max-w-[900px]">
-            {/* Tide Chart Widget */}
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
             <div className="flex-1 min-w-[300px]">
               <iframe
                 src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
@@ -27,8 +25,6 @@ function PlanYourTrip() {
                 loading="lazy"
               ></iframe>
             </div>
-
-            {/* Side Image */}
             <div className="flex-1">
               <Image 
                 src="/plan your trip/G0534246.jpg" 
