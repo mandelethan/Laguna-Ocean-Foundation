@@ -6,28 +6,33 @@ import Image from 'next/image';
 
 function PlanYourTrip() {
   return (
-    <section className="text-gray-800 text-lg leading-relaxed">
+    <section className="text-gray-800 text-lg leading-relaxed font-sans">
       {/* Tide Chart Section - White */}
-      <div className="bg-white px-6 py-12">
-        <h1 className="text-[36px] font-bold text-[#1e4d4d] mb-4 text-center">Tidepool Charts</h1>
-        <p className="max-w-2xl mx-auto mb-10 text-center">
-          Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
-        </p>
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-8">
-          <div className="w-full lg:w-1/2">
-            <iframe
-              src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
-              width="100%"
-              height="280"
-              style={{ border: 'none', overflow: 'hidden' }}
-              loading="lazy"
-            ></iframe>
+      <div className="bg-white px-6 pt-32 pb-16">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-start gap-10">
+          {/* Text and Chart */}
+          <div className="flex-1">
+            <h1 className="text-[36px] font-semibold text-[#1e4d4d] mb-4">Tidepool Charts</h1>
+            <p className="mb-6 font-normal">
+              Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
+            </p>
+            <div className="max-w-md">
+              <iframe
+                src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
+                width="100%"
+                height="280"
+                style={{ border: 'none', overflow: 'hidden' }}
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
-          <div className="w-full lg:w-1/2">
+
+          {/* Seaweed Image */}
+          <div className="flex-shrink-0">
             <Image 
               src="/plan your trip/G0534246.jpg" 
               alt="Underwater tidepool scene" 
-              className="rounded-xl shadow-md w-full h-auto object-cover"
+              className="rounded-xl shadow-md w-[500px] h-auto"
               width={600}
               height={600}
             />
