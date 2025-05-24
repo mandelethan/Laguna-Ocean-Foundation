@@ -1,106 +1,103 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
+"use client";
 
-function MPARules() {
+import React, { useState } from "react";
+import Image from "next/image";
+
+const mpaFaqs = [
+  {
+    question: "What are marine protected areas (MPAs)?",
+    answer:
+      "MPAs are named, discrete geographic marine or estuarine areas designed to protect or conserve marine life and habitat.",
+  },
+  {
+    question: "What can I do in an MPA?",
+    answer:
+      "Swimming, wading, boating, diving and surfing are allowed in MPAs.",
+  },
+  {
+    question: "How do I know where an MPA is?",
+    answer: (
+      <>
+        Most MPA boundaries use major onshore landmarks and simple north/south or east/west lines for easy recognition.
+        View the map here:{" "}
+        <a
+          href="https://wildlife.ca.gov/Conservation/Marine/MPAs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-blue-200"
+        >
+          wildlife.ca.gov/Conservation/Marine/MPAs
+        </a>
+      </>
+    ),
+  },
+  {
+    question: "How do MPAs affect existing fisheries regulations and closures?",
+    answer:
+      "MPAs don’t replace existing regulations. They help allow natural interactions between fished and unfished species.",
+  },
+];
+
+export default function MPARules() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="pt-20 text-base leading-relaxed font-['Nunito_Sans'] text-gray-800">
-      {/* Hero Section */}
-      <div className="relative w-full">
-        <Image
-          src="/mpa rules/Colorful Starfish.JPG"
-          alt="Colorful tidepool background"
-          className="w-full h-auto object-cover"
-          width={600}
-          height={600}
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-        <h1
-  className="text-[32px] text-center font-bold px-4 text-white"
-  style={{ fontFamily: "'Open Sans Condensed', sans-serif" }}
->
+    <div className="min-h-screen bg-[#1C506B] text-white px-6 pt-32 pb-10 md:px-24 md:pt-40 md:pb-16">
+      <h1 className="text-4xl md:text-5xl font-bold mb-12">
+        Marine Protected Areas (MPAs)
+      </h1>
 
-            Marine Protected <br /> Areas (MPAs)
-          </h1>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="px-4 py-8 space-y-4">
-        {[
-          {
-            question: 'What are marine protected areas (MPAs)?',
-            answer:
-              'MPAs are named, discrete geographic marine or estuarine areas designed to protect or conserve marine life and habitat.',
-          },
-          {
-            question: 'What can I do in an MPA?',
-            answer: 'Swimming, wading, boating, diving and surfing are allowed in MPAs.',
-          },
-          {
-            question: 'How do I know where an MPA is?',
-            answer: (
-              <>
-                Most MPA boundaries are designed to use major onshore landmarks and simple due north/south or east/west lines for easy recognition.
-                You can go to this map to get a better view of these areas:{' '}
-                <a
-                  href="https://wildlife.ca.gov/Conservation/Marine/MPAs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline text-blue-700"
-                >
-                  https://wildlife.ca.gov/Conservation/Marine/MPAs
-                </a>
-              </>
-            ),
-          },
-          {
-            question: 'How do MPAs affect existing fisheries regulations and closures?',
-            answer:
-              'MPAs are not intended to replace existing regulations. They are intended to allow for interactions between both fished and unfished species to occur in a more natural setting.',
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="p-4 rounded-md shadow-sm"
-            style={{
-              backgroundColor: '#B6E8DF',
-              fontFamily: "'Nunito Sans', sans-serif",
-            }}
-          >
-            <h2 className="font-bold mb-2 border-b-2 border-black pb-1">
-              {item.question}
-            </h2>
-            <p>{item.answer}</p>
+      {/* Collapsible FAQ Section */}
+      <div className="divide-y divide-white/30 border-y border-white/30">
+        {mpaFaqs.map((faq, idx) => (
+          <div key={idx}>
+            <button
+              onClick={() => toggle(idx)}
+              className="w-full text-left flex justify-between items-center px-6 pt-6 pb-5 text-xl font-semibold"
+            >
+              {faq.question}
+              <span className="text-2xl">{openIndex === idx ? "▴" : "▾"}</span>
+            </button>
+            {openIndex === idx && (
+              <div className="px-6 pb-6 text-base text-white">
+                {faq.answer}
+              </div>
+            )}
           </div>
         ))}
       </div>
 
-      {/* Call to Action Section */}
-      <div
-        className="py-10 px-6 text-center"
-        style={{ backgroundColor: '#75B1DC' }}
-      >
-        <h2
-          className="text-xl font-bold mb-4"
-          style={{
-            color: '#1A516A',
-            fontFamily: "'Nunito Sans', sans-serif",
-          }}
-        >
-          Want to find out more?
-        </h2>
-        <a
-          href="https://lagunaoceanfoundation.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-white hover:bg-blue-100 text-[#1A516A] font-semibold px-4 py-2 rounded shadow-md transition"
-        >
-          Check out our Main Site!
-        </a>
+      {/* CTA Section with Starfish Background */}
+      <div className="mt-16 relative rounded-lg overflow-hidden shadow-lg">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/mpa rules/Colorful Starfish.JPG" // Ensure this path is correct and file is public
+            alt="Starfish tidepool background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#1C506B]/60" />
+        </div>
+
+        {/* CTA Content */}
+        <div className="relative z-10 text-center py-12 px-6 text-white">
+          <h2 className="text-2xl font-bold mb-4">Want to find out more?</h2>
+          <a
+            href="https://lagunaoceanfoundation.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white hover:bg-blue-100 text-[#1A516A] font-semibold px-5 py-2 rounded shadow-md transition"
+          >
+            Check out our Main Site!
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
-
-export default MPARules;
