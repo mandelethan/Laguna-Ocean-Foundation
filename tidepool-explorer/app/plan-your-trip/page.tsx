@@ -40,26 +40,31 @@ function PlanYourTrip() {
           </div>
         </div>
       </div>
-      {/* Tidepool Maps Section - Teal */}
-      <div className="bg-[#7DC7C9] px-6 py-16 text-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-          <Image
-            src="/plan your trip/G0136775.jpg"
-            alt="Discover the Tidepools"
-            className="rounded-xl shadow-md w-full lg:w-[500px]"
-            width={500}
-            height={350}
-          />
-          <div className="text-left">
+        {/* Tidepool Maps Section - Teal */}
+      <div className="bg-[#7DC7C9] px-6 py-24 text-[#0F2C3F]">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center gap-12">
+          {/* Text Block */}
+          <div className="text-left lg:basis-1/2">
             <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
             <p className="mb-6">
               Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for optimal viewing times and accessibility options, ensuring everyone can join in the fun. With your curiosity as your guide, wander through these rocky havens, uncovering hidden marine treasures and encountering fascinating sea creatures along the way.
             </p>
             <Link href="/locations">
-              <button className="bg-white text-[#1e4d4d] px-6 py-3 rounded-md font-semibold hover:shadow-lg transition">
+              <button className="bg-[#DCE8FE] text-[#1e4d4d] px-6 py-3 rounded-md font-semibold shadow-lg hover:shadow-xl transition">
                 View Tidepool Maps →
               </button>
             </Link>
+          </div>
+
+          {/* Image Block */}
+          <div className="lg:basis-1/2">
+            <Image
+              src="/plan your trip/G0136775.jpg"
+              alt="Discover the Tidepools"
+              className="rounded-xl shadow-md w-full lg:w-[500px]"
+              width={500}
+              height={350}
+            />
           </div>
         </div>
       </div>
