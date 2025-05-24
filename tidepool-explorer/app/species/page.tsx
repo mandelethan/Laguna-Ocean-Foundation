@@ -141,7 +141,10 @@ function Species() {
       <div className="mx-8 mt-6 mb-8 p-6 bg-[#5a8baa] rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {getFilteredSpecies().length > 0 ? (
-            getFilteredSpecies().map((item, index) => (
+            getFilteredSpecies()
+            .slice()
+            .sort((a, b) => a.commonName.localeCompare(b.commonName))
+            .map((item, index) => (
               <div
                 key={index}
                 className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition"
