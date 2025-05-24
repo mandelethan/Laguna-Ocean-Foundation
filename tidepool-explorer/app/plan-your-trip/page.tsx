@@ -9,7 +9,7 @@ function PlanYourTrip() {
     <section className="text-gray-800 text-lg leading-relaxed">
       {/* Tide Chart Section - White */}
       <div className="bg-white px-6 pt-32 pb-12">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl ">
           <h1 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Tidepool Charts</h1>
           <p className="mb-10 max-w-3xl">
             Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
