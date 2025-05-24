@@ -1,105 +1,78 @@
 'use client';
+
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
-export default function PlanYourTrip() {
+function PlanYourTrip() {
   return (
-    <main className="bg-white text-gray-800 leading-relaxed text-lg">
-      {/* Section 1: Hero */}
-      <section className="w-full">
-        <Image
-          src="/plan your trip/Laguna Beach Sunset Serenade.png"
-          alt="Sunset over the coast"
-          className="w-full h-auto object-cover"
-          width={1600}
-          height={800}
-          priority
-        />
-      </section>
-
-      {/* Section 2: Intro */}
-      <section className="py-12 px-6 text-center bg-white">
-        <h1 className="text-[36px] font-bold text-[#4A899C] mb-6">Tidepool Charts</h1>
-        <p className="max-w-2xl mx-auto">
-          Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching
-          the location for accessibility options like wheelchair ramps or smooth paths. Don't forget to grab your trusty tidepool
-          exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you're marveling at the
-          wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
+    <section className="text-gray-800 text-lg leading-relaxed">
+      {/* Tide Chart Section - White */}
+      <div className="bg-white px-6 py-12 text-center">
+        <h1 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Tidepool Charts</h1>
+        <p className="max-w-2xl mx-auto mb-6">
+          Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
         </p>
-      </section>
+        <div className="max-w-xl mx-auto mt-4">
+          <iframe
+            src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
+            width="100%"
+            height="280"
+            style={{ border: 'none', overflow: 'hidden' }}
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
 
-      {/* Section 3: Tide Chart Widget */}
-      <section className="bg-[#7DC7C9] py-16 px-6 text-center">
-        <h2 className="text-[32px] font-bold text-white mb-4">Tide Charts</h2>
-        <p className="text-white max-w-xl mx-auto mb-8">
-          Tide charts help you know how high or low the water level will be on any given day. Low tides reveal hidden tidepool
-          gems, while high tides can submerge them.
-        </p>
-        <iframe
-          src="https://www.tidespro.com/scripts/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
-          width="100%"
-          height="320"
-          className="max-w-4xl mx-auto border-0"
-          loading="lazy"
-        ></iframe>
-      </section>
-
-      {/* Section 4: Locations */}
-      <section className="bg-[#4A899C] text-white py-16 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-full lg:w-1/2">
-            <Image
-              src="/plan your trip/G0136775.jpg"
-              alt="Tidepool exploration"
-              width={600}
-              height={400}
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
-          </div>
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-[32px] font-bold mb-4">Tidepool Maps</h2>
+      {/* Tidepool Maps Section - Teal */}
+      <div className="bg-[#7DC7C9] px-6 py-16 text-white">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          <Image
+            src="/plan your trip/G0136775.jpg"
+            alt="Discover the Tidepools"
+            className="rounded-xl shadow-md w-full lg:w-[500px]"
+            width={500}
+            height={350}
+          />
+          <div className="text-left">
+            <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
             <p className="mb-6">
-              Explore tidepools like Treasure Island, Shaw's Cove, or Heisler Park. Use maps and tide info to plan the best
-              times for access and discovery.
+              Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for optimal viewing times and accessibility options, ensuring everyone can join in the fun. With your curiosity as your guide, wander through these rocky havens, uncovering hidden marine treasures and encountering fascinating sea creatures along the way.
             </p>
-            <Link
-              href="/locations"
-              className="inline-block bg-white text-[#4A899C] px-6 py-3 rounded shadow font-semibold hover:bg-gray-100"
-            >
-              View Tidepool Maps →
+            <Link href="/locations">
+              <button className="bg-white text-[#1e4d4d] px-6 py-3 rounded-md font-semibold hover:shadow-lg transition">
+                View Tidepool Maps →
+              </button>
             </Link>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Section 5: MPA Info */}
-      <section className="bg-[#E3C088] py-16 px-6 text-center text-[#1e4d4d]">
-        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8">
-          <div className="w-full lg:w-1/2">
-            <Image
-              src="/plan your trip/moss-cove-laguna-beach.jpg"
-              alt="Marine Protected Area Sign"
-              width={600}
-              height={400}
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
-          </div>
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-[32px] font-bold mb-4">Marine Protected Areas</h2>
+      {/* MPA Section - Deep Blue */}
+      <div className="bg-[#4A899C] px-6 py-16 text-white">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+          <div className="text-left">
+            <h2 className="text-[36px] font-bold mb-4">Marine Protected Areas</h2>
             <p className="mb-6">
-              MPAs protect biodiversity and ocean health by preserving habitats like tidepools. Following MPA rules supports
-              sustainability for future generations.
+              MPAs safeguard vital ocean ecosystems, ensuring the health of marine life and habitats like tide pools. These protected zones help preserve biodiversity, support sustainable fisheries, and maintain the delicate balance of coastal environments. By respecting MPAs, we contribute to the long-term health of our oceans and the incredible species that call them home.
             </p>
-            <Link
-              href="/mpa-rules"
-              className="inline-block bg-white text-[#1e4d4d] px-6 py-3 rounded shadow font-semibold hover:bg-gray-100"
-            >
-              View MPA Guide →
+            <Link href="/mpa-rules">
+              <button className="bg-white text-[#1e4d4d] px-6 py-3 rounded-md font-semibold hover:shadow-lg transition">
+                View MPA Guide →
+              </button>
             </Link>
           </div>
+          <Image
+            src="/plan your trip/moss-cove-laguna-beach.jpg"
+            alt="MPA sign at beach"
+            className="rounded-xl shadow-md w-full lg:w-[500px]"
+            width={500}
+            height={350}
+          />
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
+
+export default PlanYourTrip;
