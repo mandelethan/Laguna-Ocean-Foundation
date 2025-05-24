@@ -42,7 +42,7 @@ function PlanYourTrip() {
       </div>
       {/* Tidepool Maps Section - Teal */}
       <div className="bg-[#7DC7C9] px-6 py-24 text-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
           
           {/* Image on the left */}
           <Image
