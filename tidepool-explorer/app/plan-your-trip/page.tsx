@@ -40,9 +40,9 @@ function PlanYourTrip() {
           </div>
         </div>
       </div>
-      {/* Tidepool Maps Section - Teal */}
+ {/* Tidepool Maps Section - Teal */}
       <div className="bg-[#7DC7C9] px-6 py-24 text-white">
-        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-start gap-12">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-stretch gap-12">
           
           {/* Left: Image */}
           <Image
@@ -50,19 +50,19 @@ function PlanYourTrip() {
             alt="Discover the Tidepools"
             className="rounded-xl shadow-md w-full lg:w-[500px] h-auto object-cover"
             width={500}
-            height={350}
+            height={400}
           />
 
-          {/* Right: Text & Button container */}
-          <div className="flex-1 flex flex-col text-[#0F2C3F] h-full">
+          {/* Right: Text + Button, fills full height and aligns bottom */}
+          <div className="flex flex-col justify-between text-[#0F2C3F]">
             <div>
               <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
-              <p>
+              <p className="mb-4">
                 Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for optimal viewing times and accessibility options, ensuring everyone can join in the fun. With your curiosity as your guide, wander through these rocky havens, uncovering hidden marine treasures and encountering fascinating sea creatures along the way.
               </p>
             </div>
 
-            <div className="mt-auto pt-6">
+            <div className="pt-4">
               <Link href="/locations">
                 <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
                   View Tidepool Maps →
@@ -73,6 +73,7 @@ function PlanYourTrip() {
 
         </div>
       </div>
+
       {/* MPA Section - Deep Blue */}
       <div className="bg-[#4A899C] px-6 py-16 text-white">
         <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
