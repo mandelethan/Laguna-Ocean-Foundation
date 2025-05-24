@@ -89,9 +89,10 @@ function Locations() {
                 <AccordionItem
                   key={index}
                   value={id}
-                  className="bg-white rounded-3xl shadow-md transition-shadow duration-300 overflow-hidden hover:shadow-xl"
+                  id={cardId}
+                  className="bg-white rounded-3xl shadow-md transition-shadow duration-300 overflow-hidden hover:shadow-xl scroll-mt-20"
                 >
-                  <div id={cardId} className="h-1" />
+
                   <div className="relative w-full h-[200px] md:h-[300px] overflow-hidden rounded-t-3xl">
                     <Image
                       src={location.image}
@@ -104,7 +105,7 @@ function Locations() {
                   </div>
 
 
-                  <AccordionTrigger className="group flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none">
+                  <AccordionTrigger className="flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none">
                     <span className="text-white">{location.name}</span>
                     <ChevronDown
                       className="h-6 w-6 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180"
