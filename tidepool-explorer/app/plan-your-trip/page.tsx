@@ -42,9 +42,9 @@ function PlanYourTrip() {
       </div>
       {/* Tidepool Maps Section - Teal */}
       <div className="bg-[#7DC7C9] px-6 py-24 text-white">
-        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-12">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-start gap-12">
           
-          {/* Image on the left */}
+          {/* Left: Image */}
           <Image
             src="/plan your trip/G0136775.jpg"
             alt="Discover the Tidepools"
@@ -53,18 +53,24 @@ function PlanYourTrip() {
             height={350}
           />
 
-          {/* Text content on the right */}
-          <div className="text-left text-[#0F2C3F]">
-            <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
-            <p className="mb-6">
-              Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for optimal viewing times and accessibility options, ensuring everyone can join in the fun. With your curiosity as your guide, wander through these rocky havens, uncovering hidden marine treasures and encountering fascinating sea creatures along the way.
-            </p>
-            <Link href="/locations">
-              <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
-                View Tidepool Maps →
-              </button>
-            </Link>
+          {/* Right: Text & Button container */}
+          <div className="flex-1 flex flex-col text-[#0F2C3F] h-full">
+            <div>
+              <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
+              <p>
+                Set sail on a coastal escapade in the Laguna Ocean area, where you can explore tidepools such as Treasure Island, Shaw&apos;s Cove, or Heisler Park. Start by checking tide schedules for optimal viewing times and accessibility options, ensuring everyone can join in the fun. With your curiosity as your guide, wander through these rocky havens, uncovering hidden marine treasures and encountering fascinating sea creatures along the way.
+              </p>
+            </div>
+
+            <div className="mt-auto pt-6">
+              <Link href="/locations">
+                <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
+                  View Tidepool Maps →
+                </button>
+              </Link>
+            </div>
           </div>
+
         </div>
       </div>
       {/* MPA Section - Deep Blue */}
