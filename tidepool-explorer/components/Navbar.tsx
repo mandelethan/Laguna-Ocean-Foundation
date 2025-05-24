@@ -18,10 +18,10 @@ const navigationItems = [
 function Logo() {
   return (
     <Link href="/" prefetch={false} className="flex items-center">
-      <Image src="/LOF_Logo.png" width={48} height={48} alt="Logo" />
-      <div className="pl-4">
-        <h1 className="text-2xl">Laguna Explorer</h1>
-        <h2 className="text-sm">by Laguna Ocean Foundation</h2>
+      <Image src="/LOF_Logo.png" width={60} height={60} alt="Logo" />
+      <div className="pl-4 leading-tight">
+        <h1 className="text-2xl text-[#1a516a] font-semibold">Laguna Explorer</h1>
+        <h2 className="text-sm text-[#1a516a]">by Laguna Ocean Foundation</h2>
       </div>
     </Link>
   );
@@ -31,7 +31,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed flex h-20 w-full items-center border-b px-4 md:px-6 bg-white z-50 text-[#19516a]">
+    <header className="fixed flex h-20 w-full items-center px-4 md:px-6 bg-white z-50 text-[#19516a]">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         {/* Mobile Navbar */}
         <div className="flex items-center w-full lg:hidden justify-between">
@@ -65,14 +65,18 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="self-center"
               >
-                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer mr-3">Donate</Button>
+                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer mr-3">
+                  Donate
+                </Button>
               </Link>
-              <Link 
-                href="https://www.lagunaoceanfoundation.org/volunteering" 
-                target="_blank" 
+              <Link
+                href="https://www.lagunaoceanfoundation.org/volunteering"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer">Volunteer</Button>
+                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer">
+                  Volunteer
+                </Button>
               </Link>
             </div>
           </div>
@@ -80,21 +84,19 @@ export default function Navbar() {
       </Sheet>
 
       {/* Desktop Navbar */}
-      <div className="hidden lg:flex lg:w-full">
-        <nav className="flex items-center justify-between gap-6 lg:w-full">
-          <Logo />
-          <div className="flex">
-            {navigationItems.slice(1).map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium hover:underline underline-offset-4 mx-2 text-black"
-                prefetch={false}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+      <div className="hidden lg:flex lg:w-full items-center justify-between">
+        <Logo />
+        <nav className="flex gap-10 pr-4">
+          {navigationItems.slice(1).map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-base font-semibold hover:underline underline-offset-4 text-[#1a516a]"
+              prefetch={false}
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
