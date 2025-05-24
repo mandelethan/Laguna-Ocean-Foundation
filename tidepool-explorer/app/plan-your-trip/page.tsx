@@ -13,14 +13,27 @@ function PlanYourTrip() {
         <p className="max-w-2xl mx-auto mb-6">
           Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
         </p>
-        <div className="max-w-xl mx-auto mt-4">
-          <iframe
-            src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
-            width="100%"
-            height="280"
-            style={{ border: 'none', overflow: 'hidden' }}
-            loading="lazy"
-          ></iframe>
+        <div className="max-w-6xl mx-auto mt-10 flex flex-col lg:flex-row items-center justify-center gap-8">
+          {/* Tide Chart Widget */}
+          <div className="w-full lg:w-1/2">
+            <iframe
+              src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
+              width="100%"
+              height="280"
+              style={{ border: 'none', overflow: 'hidden' }}
+              loading="lazy"
+            ></iframe>
+          </div>
+          {/* Tidepool Image */}
+          <div className="w-full lg:w-1/2">
+            <Image
+              src="/plan your trip/Laguna Beach Sunset Serenade.png"
+              alt="Underwater tidepool sunrise view"
+              className="rounded-xl shadow-md w-full"
+              width={500}
+              height={280}
+            />
+          </div>
         </div>
       </div>
 
