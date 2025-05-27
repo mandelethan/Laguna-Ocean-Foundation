@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import InteractiveMap from "../../components/InteractiveMap";
 import Image from "next/image";
 import {
   Accordion,
@@ -24,10 +25,24 @@ interface Location {
   accessPoint: string;
   parking: string;
   image: string;
+  svgId?: string;
+}
+
+function dmsToDecimal(dms: string): string | null {
+  const match = dms.match(/(\d+)[°](\d+)'(\d+)"([NS])\s*(\d+)[°](\d+)'(\d+)"([EW])/);
+  if (!match) return null;
+  const [,
+    latDeg, latMin, latSec, latDir,
+    lonDeg, lonMin, lonSec, lonDir
+  ] = match;
+  const lat = (parseInt(latDeg) + parseInt(latMin) / 60 + parseInt(latSec) / 3600) * (latDir === "S" ? -1 : 1);
+  const lon = (parseInt(lonDeg) + parseInt(lonMin) / 60 + parseInt(lonSec) / 3600) * (lonDir === "W" ? -1 : 1);
+  return `${lat},${lon}`;
 }
 
 function Locations() {
   const [locations, setLocations] = useState<Location[]>([]);
+  const [expandedCard, setExpandedCard] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     fetch("/data/locations.json")
@@ -42,7 +57,6 @@ function Locations() {
   return (
     <section className="bg-[#d6f0ff] text-[#19516a]">
       <div className="px-4 md:px-16 pt-20 pb-16 space-y-12">
-        {/* Title & Description */}
         <div className="max-w-4xl mt-16">
           <h2 className="text-5xl font-bold mb-3">Our Locations</h2>
           <h3 className="text-xl font-regular mt-2 leading-relaxed">
@@ -50,44 +64,56 @@ function Locations() {
           </h3>
         </div>
 
-        {/* Subheading */}
         <h2 className="text-3xl font-semibold">All Tidepool Locations</h2>
 
-        {/* Card Container */}
+        <InteractiveMap
+          onLocationClick={(id) => {
+            console.log("Received location ID in Locations.tsx:", id);
+            setExpandedCard(id);
+          }}
+        />
+
         <div className="bg-[#36879F] rounded-3xl p-6 md:p-10">
-          <Accordion type="single" collapsible className="space-y-10">
+          <Accordion
+            type="single"
+            collapsible
+            value={expandedCard}
+            onValueChange={setExpandedCard}
+            className="space-y-10"
+          >
             {locations.map((location, index) => {
-              const id = formatId(location.name);
+              const id = location.svgId || formatId(location.name);
+              const cardId = `card-${id}`;
+
               return (
                 <AccordionItem
                   key={index}
-                  value={`item-${index}`}
-                  id={id}
-                  className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                  value={id}
+                  className="bg-white rounded-3xl shadow-md transition-shadow duration-300 overflow-hidden hover:shadow-xl"
                 >
-                  {/* Optimized Image */}
-                  <div className="relative h-[250px] md:h-[400px] w-full overflow-hidden">
+                  <div id={cardId} className="h-1" />
+                  <div className="relative w-full h-[200px] md:h-[300px] overflow-hidden rounded-t-3xl">
                     <Image
                       src={location.image}
                       alt={`${location.name} Picture`}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover"
+                      priority
                     />
                   </div>
 
-                  {/* Accordion Trigger */}
-                  <AccordionTrigger className="flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none [&>svg:not(:last-child)]:hidden">
+
+                  <AccordionTrigger className="group flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none">
                     <span className="text-white">{location.name}</span>
-                    <ChevronDown className="h-6 w-6 text-white transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    <ChevronDown
+                      className="h-6 w-6 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180"
+                    />
                   </AccordionTrigger>
 
-                  {/* Accordion Content */}
                   <AccordionContent className="px-6 pb-8 pt-2 text-white bg-[#295068] rounded-b-3xl">
                     <p className="text-base mb-6">{location.overview}</p>
-
                     <div className="space-y-6">
-                      {/* Accessibility */}
                       <div>
                         <div className="flex items-center font-semibold text-lg mb-1">
                           <ChartNoAxesColumnIncreasing className="w-5 h-5 mr-2 text-white" />
@@ -100,7 +126,6 @@ function Locations() {
                         </ul>
                       </div>
 
-                      {/* Coordinates */}
                       <div>
                         <div className="flex items-center font-semibold text-lg mb-1">
                           <MapPin className="w-5 h-5 mr-2 text-white" />
@@ -113,7 +138,6 @@ function Locations() {
                         </ul>
                       </div>
 
-                      {/* Access Point */}
                       <div>
                         <div className="flex items-center font-semibold text-lg mb-1">
                           <Route className="w-5 h-5 mr-2 text-white" />
@@ -122,7 +146,6 @@ function Locations() {
                         <p className="ml-7 text-base">{location.accessPoint}</p>
                       </div>
 
-                      {/* Parking */}
                       <div>
                         <div className="flex items-center font-semibold text-lg mb-1">
                           <CircleParking className="w-5 h-5 mr-2 text-white" />
@@ -130,6 +153,29 @@ function Locations() {
                         </div>
                         <p className="ml-7 text-base">{location.parking}</p>
                       </div>
+
+                      {location.coordinates.length > 0 && (
+                        <div className="ml-1 mt-6">
+                          {(() => {
+                            const raw = location.coordinates[0];
+                            const dms = raw.includes(":") ? raw.split(":")[1].trim() : raw;
+                            const decimalCoords = dmsToDecimal(dms);
+                            return decimalCoords ? (
+                              <a
+                                href={`https://www.google.com/maps?q=${decimalCoords}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-4 py-2 bg-white text-[#295068] font-semibold rounded-full hover:bg-gray-100 transition"
+                              >
+                                <MapPin className="w-4 h-4 mr-2" />
+                                View on Google Maps
+                              </a>
+                            ) : (
+                              <p className="text-sm text-red-200">⚠️ Invalid coordinates</p>
+                            );
+                          })()}
+                        </div>
+                      )}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -143,11 +189,3 @@ function Locations() {
 }
 
 export default Locations;
-
-
-
-
-
-
-
-
