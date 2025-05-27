@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import InteractiveMap from "../../components/InteractiveMap";
+import dynamic from 'next/dynamic';
+const InteractiveMap = dynamic(() => import('../../components/InteractiveMap'), { ssr: false });
 import Image from "next/image";
 import {
   Accordion,
@@ -104,12 +105,12 @@ function Locations() {
                     />
                   </div>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                   <AccordionTrigger className="flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none">
                     <span className="text-white">{location.name}</span>
-                    <ChevronDown
-                      className="h-6 w-6 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180"
-                    />
                   </AccordionTrigger>
 
                   <AccordionContent className="px-6 pb-8 pt-2 text-white bg-[#295068] rounded-b-3xl">
