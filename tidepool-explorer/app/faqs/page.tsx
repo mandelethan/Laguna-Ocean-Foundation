@@ -76,11 +76,13 @@ export default function FAQPage() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredFaqs = faqData.filter((item) => {
-    const matchesSearch = item.question.toLowerCase().includes(search.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+  const filteredFaqs = faqData
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => {
+      const matchesSearch = item.question.toLowerCase().includes(search.toLowerCase());
+      const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
+      return matchesSearch && matchesCategory;
+    });
 
   useEffect(() => {
     setActive(Array(faqData.length).fill(false));
@@ -93,87 +95,102 @@ export default function FAQPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1C506B] text-white px-6 pt-32 pb-10 md:px-24 md:pt-40 md:pb-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-15">Frequently Asked Questions</h1>
-     
+    <section className="bg-[#19516a] text-white text-lg leading-relaxed min-h-screen flex flex-col">
+      <div className="px-6 pt-32 pb-16 flex-grow">
+        <div className="max-w-[1320px] mx-auto">
+          <h1 className="text-[36px] font-bold mb-6">Frequently Asked Questions</h1>
 
-      <div className="md:grid md:grid-cols-[16rem_1fr] flex flex-col gap-10">
-        {/* Sidebar */}
-        <aside className="md:w-64 w-full md:sticky top-32 h-fit">
-          <div className="relative mb-6">
-            <input
-              type="text"
-              placeholder="Search Question Here..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full px-4 pl-10 py-1.5 text-sm rounded-full bg-white text-black shadow placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            />
-            <Image
-              src="/search-icon.png"
-              alt="Search"
-              width={16}
-              height={16}
-              className="absolute left-3 top-1/2 transform -translate-y-1/2"
-            />
-          </div>
-          <nav className="space-y-2">
-            {["All", "Planning", "Things to Do", "Tidepool Information"].map((category) => {
-              const isActive = selectedCategory === category;
-              return (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`block w-full text-left font-semibold transition-all duration-150 ${
-                    isActive ? "underline" : "hover:underline"
-                  }`}
-                  style={{ color: isActive ? "#C2E5F5" : "#8CC0D9" }}
-                >
-                  {category}
-                </button>
-              );
-            })}
-          </nav>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1">
-          {filteredFaqs.length === 0 ? (
-            <div className="text-white text-center font-semibold py-20 rounded-xl">
-              <p className="text-xl">No matching questions found.</p>
-            </div>
-          ) : (
-            <div className="divide-y divide-white/30">
-              {filteredFaqs.map((item, i) => {
-                const isFirst = i === 0;
-                const isLast = i === filteredFaqs.length - 1;
-
-                return (
-                  <div
-                    key={i}
-                    className={`
-                      ${isFirst ? "border-t border-white/30" : ""}
-                      ${isLast ? "border-b border-white/30" : ""}
-                    `}
-                  >
+          <div className="md:grid md:grid-cols-[16rem_1fr] flex flex-col gap-10">
+            <aside className="md:w-64 w-full md:sticky top-32 h-fit">
+              <div className="relative mb-6">
+                <input
+                  type="text"
+                  placeholder="Search Question Here..."
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="w-full px-4 pl-10 py-2 text-sm rounded-full bg-white text-black shadow placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                />
+                <Image
+                  src="/search-icon.png"
+                  alt="Search"
+                  width={16}
+                  height={16}
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2"
+                />
+              </div>
+              <nav className="space-y-2">
+                {["All", "Planning", "Things to Do", "Tidepool Information"].map((category) => {
+                  const isActive = selectedCategory === category;
+                  return (
                     <button
-                      onClick={() => toggleActive(i)}
-                      className="w-full flex justify-between items-center px-6 pt-6 pb-5 text-left text-xl font-semibold"
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      className={`block w-full text-left font-semibold transition-all duration-150 ${
+                        isActive ? "underline" : "hover:underline"
+                      }`}
+                      style={{ color: isActive ? "#C2E5F5" : "#8CC0D9" }}
                     >
-                      {item.question}
-                      <span className="text-2xl">{active[i] ? "▴" : "▾"}</span>
+                      {category}
                     </button>
-                    {active[i] && (
-                      <div className="px-6 pb-4 text-base text-white">
-                        {item.answer}
+                  );
+                })}
+              </nav>
+            </aside>
+
+            <main className="flex-1">
+              {filteredFaqs.length === 0 ? (
+                <div className="flex flex-col items-center space-y-4 text-white text-center font-semibold py-20 rounded-xl">
+                  <p className="text-xl">No matching questions found.</p>
+                  <Image
+                    src="/whale.png"
+                    alt="No Results"
+                    width={500}
+                    height={500}
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="divide-y divide-white/30">
+                  {filteredFaqs.map(({ item, index }, i) => {
+                    const isFirst = i === 0;
+                    const isLast = i === filteredFaqs.length - 1;
+
+                    return (
+                      <div
+                        key={index}
+                        className={`
+                          ${isFirst ? "border-t border-white/30" : ""}
+                          ${isLast ? "border-b border-white/30" : ""}
+                        `}
+                      >
+                        <button
+                          onClick={() => toggleActive(index)}
+                          className="w-full flex justify-between items-center px-6 pt-6 pb-5 text-left text-2xl font-semibold"
+                        >
+                          {item.question}
+                          <span
+                            className={`inline-block text-xl transition-transform duration-300 ${
+                              active[index] ? "rotate-180" : ""
+                            }`}
+                          >
+                            ⌄
+                          </span>
+                        </button>
+                        {active[index] && (
+                          <div className="px-6 pb-4 pt-2 text-base text-white">
+                            {item.answer}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </main>
+                    );
+                  })}
+                </div>
+              )}
+            </main>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
+

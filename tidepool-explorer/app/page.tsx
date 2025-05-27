@@ -3,8 +3,8 @@ import Link from "next/link";
 
 function Home() {
   return (
-    <main className="bg-[#295068] min-h-screen text-white pb-20">
-      {/* Hero Section with Blue Gradient Overlay */}
+    <main className="bg-[#19516a] min-h-screen text-white pb-20">
+      {/* Hero Section with Brand Blue Gradient Overlay */}
       <div className="relative w-full h-[450px] md:h-[550px]">
         <Image
           src="/laguna-beach.jpg"
@@ -13,7 +13,7 @@ function Home() {
           className="object-cover z-0"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#295068]/40 to-[#295068] z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#19516a]/30 to-[#19516a] z-10" />
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center z-20 px-4 w-full max-w-6xl">
           <h1 className="text-5xl md:text-[60px] font-semibold leading-tight">
             Laguna Beach Tidepools
