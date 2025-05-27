@@ -13,29 +13,27 @@ useEffect(() => {
   fetch("/locations/fixed-locations.svg")
     .then((res) => res.text())
     .then((text) => {
-      const styled = text.replace(
-        "<svg",
-        `<svg class="w-full h-auto" preserveAspectRatio="xMidYMid meet"`
-      ).replace(
-        ">", // only the *first closing angle bracket* after <svg
-        `>
-        <style>
-          path {
-            fill: transparent;
-            stroke: transparent;
-            transition: all 0.2s ease;
-            cursor: pointer;
-          }
-        </style>`,
-      );
+      const styled = text
+  .replace('<svg', `<svg class="w-full h-auto interactive-map-svg"`)
+  .replace('</svg>', `
+    <style>
+      .interactive-map-svg path[id="woods-cove"],
+      .interactive-map-svg path[id="goffs-cove"],
+      .interactive-map-svg path[id="treasure-island"],
+      .interactive-map-svg path[id="heisler-park"],
+      .interactive-map-svg path[id="shaws-cove"],
+      .interactive-map-svg path[id="crescent-bay"] {
+        cursor: pointer !important;
+        pointer-events: all !important;
+        fill: transparent !important;
+        fill-opacity: 0.01 !important;
+      }
+    </style>
+  </svg>`);
       setSvgContent(styled);
     })
     .catch((err) => console.error("Failed to load SVG:", err));
 }, []);
-
-
-
-  // ✅ Attach click listeners to paths once SVG is inserted
     useEffect(() => {
       if (!svgContent) return;
 
