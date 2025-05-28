@@ -73,15 +73,15 @@ function Species() {
         <div className="max-w-[1320px] mx-auto">
 
           {/* Heading and Dropdown */}
-          <div className="w-full flex flex-col lg:flex-row lg:items-start lg:gap-8 mb-10">
-            <div className="flex-1">
+          <div className="w-full grid lg:grid-cols-[1fr_auto] gap-4 mb-10 items-end">
+            <div>
               <h2 className="text-[36px] font-bold mb-4">Species Guide</h2>
               <p className="text-lg">
                 Learn more about the species you will encounter while visiting the tidepools. Browse categories using the dropdown and click on each tile for more details.
               </p>
             </div>
 
-            <div className="flex-shrink-0 mt-2 lg:mt-[44px] w-full lg:w-[450px] relative z-10">
+          <div className="mt-6 lg:mt-0 lg:ml-4 w-full lg:w-[450px] relative z-10">
               <Dropdown className="w-full bg-white rounded-lg shadow-lg relative">
                 <DropdownTrigger
                   className="w-full h-[50px] bg-white text-[#19516a] px-4 py-2 rounded-lg text-lg font-semibold uppercase flex items-center justify-between cursor-pointer shadow-md"
@@ -103,46 +103,49 @@ function Species() {
           </div>
 
           {/* Species Grid */}
-          <div className="bg-[#3a899b] p-6 rounded-lg">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-              {getFilteredSpecies().length > 0 ? (
-                getFilteredSpecies()
-                  .slice()
-                  .sort((a, b) => a.commonName.localeCompare(b.commonName))
-                  .map((item, index) => (
-                    <div
-                      key={index}
-                      tabIndex={0}
-                      role="button"
-                      onClick={() => setSelectedSpecies(item)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          setSelectedSpecies(item);
-                        }
-                      }}
-                      className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
-                    >
-                      <Image
-                        src={item.images[0]}
-                        alt={item.commonName}
-                        className="w-full h-full object-cover pointer-events-none"
-                        width={400}
-                        height={400}
-                        priority={index < 4}
-                      />
-                      <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
-                        <h3 className="text-white text-center font-bold uppercase text-lg px-2">
-                          {item.commonName}
-                        </h3>
-                      </div>
-                    </div>
-                  ))
-              ) : (
-                <p className="text-center text-white col-span-full">No species listed.</p>
-              )}
+          {/* Species Grid */}
+<div className="bg-[#3a899b] rounded-3xl p-6 md:p-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+    {getFilteredSpecies().length > 0 ? (
+      getFilteredSpecies()
+        .slice()
+        .sort((a, b) => a.commonName.localeCompare(b.commonName))
+        .map((item, index) => (
+          <div
+            key={index}
+            tabIndex={0}
+            role="button"
+            onClick={() => setSelectedSpecies(item)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setSelectedSpecies(item);
+              }
+            }}
+            className="w-full aspect-square rounded-3xl overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
+          >
+            <div className="w-full h-full relative">
+              <Image
+                src={item.images[0]}
+                alt={item.commonName}
+                className="w-full h-full object-cover pointer-events-none"
+                fill
+                priority={index < 4}
+              />
+              <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
+                <h3 className="text-white text-center font-bold uppercase text-lg px-2">
+                  {item.commonName}
+                </h3>
+              </div>
             </div>
           </div>
+        ))
+    ) : (
+      <p className="text-center text-white col-span-full">No species listed.</p>
+    )}
+  </div>
+</div>
+
         </div>
       </div>
 
