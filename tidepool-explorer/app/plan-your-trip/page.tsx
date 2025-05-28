@@ -10,14 +10,14 @@ function PlanYourTrip() {
       {/* Tide Chart Section - White */}
       <div className="bg-white px-6 pt-32 pb-12">
         <div className="max-w-[1320px] mx-auto">
-          <h1 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Tidepool Charts</h1>
+          <h1 className="text-[36px] font-bold text-[#19516a] mb-4">Tidepool Charts</h1>
           <p className="mb-10 text-left text-gray-800 leading-relaxed">
             Embark on your tidepool adventure by first checking out the best times to visit based on tide schedules and researching the location for accessibility options like wheelchair ramps or smooth paths. Don&apos;t forget to grab your trusty tidepool exploration gear, including sturdy footwear for navigating rocky terrain! And remember, while you&apos;re marveling at the wonders of the tide, be sure to tread lightly and respect the quirky critters that call the tidepools home.
           </p>
 
-          <div className="flex flex-col lg:flex-row justify-between items-start gap-24">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-12">
             {/* Tide Chart Widget */}
-            <div className="flex-1 max-w-[500px]">
+            <div className="w-full lg:flex-1 lg:max-w-[600px]">
               <iframe
                 src="https://www.tidespro.com/widgets/e2f8baded0a349a3854c92278b1f1ff6/tidechart/us/california/newport-beach-newport-bay-entrance-corona-del-mar"
                 width="100%"
@@ -28,11 +28,11 @@ function PlanYourTrip() {
             </div>
 
             {/* Image */}
-            <div className="flex-1 max-w-[500px]">
+            <div className="w-full lg:flex-1 lg:max-w-[500px]">
               <Image 
                 src="/plan your trip/G0534246.jpg" 
                 alt="Underwater tidepool scene" 
-                className="rounded-xl shadow-md w-full h-auto object-cover"
+                className="w-full aspect-[4/3] object-cover rounded-xl shadow-md"
                 width={500}
                 height={350}
               />
@@ -40,21 +40,24 @@ function PlanYourTrip() {
           </div>
         </div>
       </div>
+
       {/* Tidepool Maps Section - Teal */}
-      <div className="bg-[#7DC7C9] px-6 py-24 text-white">
-        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-stretch gap-12">
+      <div className="bg-[#3a899b] px-6 py-24 text-white">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
           
           {/* Left: Image */}
-          <Image
-            src="/plan your trip/G0136775.jpg"
-            alt="Discover the Tidepools"
-            className="rounded-xl shadow-md w-full lg:w-[500px] h-auto object-cover"
-            width={500}
-            height={400}
-          />
+          <div className="w-full lg:w-[500px]">
+            <Image
+              src="/plan your trip/G0136775.jpg"
+              alt="Discover the Tidepools"
+              className="w-full aspect-[4/3] object-cover rounded-xl shadow-md"
+              width={500}
+              height={400}
+            />
+          </div>
 
-          {/* Right: Text + Button, fills full height and aligns bottom */}
-          <div className="flex flex-col justify-between text-[#0F2C3F]">
+          {/* Right: Text + Button */}
+          <div className="flex flex-col justify-between w-full text-left">
             <div>
               <h2 className="text-[36px] font-bold mb-4">Tidepool Maps</h2>
               <p className="mb-4">
@@ -64,7 +67,7 @@ function PlanYourTrip() {
 
             <div className="pt-4">
               <Link href="/locations">
-                <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
+                <button className="bg-white text-[#19516a] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition">
                   View Tidepool Maps →
                 </button>
               </Link>
@@ -75,10 +78,10 @@ function PlanYourTrip() {
       </div>
 
       {/* MPA Section - Deep Blue */}
-      <div className="bg-[#4A899C] px-6 py-20 text-white">
-        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-start justify-between gap-12">
-          {/* Text + Button Column aligned to image height */}
-          <div className="flex flex-col justify-between h-[350px] text-left flex-1">
+      <div className="bg-[#19516a] px-6 py-20 text-white">
+        <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
+          {/* Text + Button */}
+          <div className="flex flex-col justify-between w-full text-left">
             <div>
               <h2 className="text-[36px] font-bold mb-4">Marine Protected Areas</h2>
               <p>
@@ -88,18 +91,18 @@ function PlanYourTrip() {
               </p>
             </div>
             <Link href="/mpa-rules">
-              <button className="bg-[#DCE8FE] text-[#0F2C3F] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition mt-6">
+              <button className="bg-white text-[#19516a] px-6 py-3 rounded-md font-semibold shadow-md hover:shadow-lg transition mt-6">
                 View MPA Guide →
               </button>
             </Link>
           </div>
 
           {/* Right Side Image */}
-          <div className="flex-1 max-w-[500px]">
+          <div className="w-full lg:w-[500px]">
             <Image
               src="/plan your trip/moss-cove-laguna-beach.jpg"
               alt="MPA sign at beach"
-              className="rounded-xl shadow-md w-full h-auto object-cover"
+              className="w-full aspect-[4/3] object-cover rounded-xl shadow-md"
               width={500}
               height={350}
             />
