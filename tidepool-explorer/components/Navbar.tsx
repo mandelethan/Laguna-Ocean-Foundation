@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "./ui/sheet";
+import { Sheet, SheetTrigger, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Menu as MenuIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const navigationItems = [
   { name: "Home", href: "/#" },
@@ -18,11 +18,13 @@ const navigationItems = [
 function Logo() {
   return (
     <Link href="/" prefetch={false} className="flex items-center">
-      <Image src="/LOF_Logo.png" width={60} height={60} alt="Logo" />
-      <div className="pl-4 leading-tight">
-        <h1 className="text-2xl text-[#1a516a] font-semibold">Laguna Explorer</h1>
-        <h2 className="text-sm text-[#1a516a]">by Laguna Ocean Foundation</h2>
-      </div>
+      <Image
+        src="/LOF_Logo_LightBackground-1.png"
+        width={140} // Slightly smaller for tighter header
+        height={140}
+        alt="Laguna Ocean Foundation Logo"
+        priority
+      />
     </Link>
   );
 }
@@ -31,74 +33,62 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed flex h-20 w-full items-center px-4 md:px-6 bg-white z-50 text-[#19516a]">
+    <header className="fixed top-0 w-full z-50 bg-white px-4 md:px-6 h-[6.5rem] flex items-center justify-between text-[#19516a]">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        {/* Mobile Navbar */}
-        <div className="flex items-center w-full lg:hidden justify-between">
+        <div className="flex items-center justify-between w-full">
           <Logo />
           <SheetTrigger asChild>
-            <div className="flex items-center cursor-pointer">
-              <MenuIcon className="w-10 h-10 text-black" />
-            </div>
+            <button aria-label="Open menu">
+              <MenuIcon className="w-8 h-8 text-[#19516a]" />
+            </button>
           </SheetTrigger>
         </div>
 
-        {/* Mobile Menu Content */}
-        <SheetContent side="right" className="w-full h-[40%]">
-          <SheetTitle className="hidden">Navigation Menu</SheetTitle>
-          <div className="flex flex-col items-start gap-4 py-6 px-8 bg-[#e3c088] rounded-md">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="py-2 text-lg font-semibold text-black hover:underline"
-                prefetch={false}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="w-full flex justify-center">
+        {/* Right-side slide-in menu */}
+        <SheetContent side="right" className="w-[85%] max-w-sm bg-white text-[#19516a] p-6">
+          <VisuallyHidden>
+            <SheetTitle>Navigation Menu</SheetTitle>
+          </VisuallyHidden>
+
+          <div className="flex flex-col h-full justify-start">
+            <div className="mb-12">
+              <Logo />
+            </div>
+
+            <nav className="flex flex-col space-y-6 font-semibold text-lg text-left">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="hover:underline"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            <div className="mt-auto pt-10 flex flex-col space-y-3 text-base underline text-left">
               <Link
                 href="https://givebutter.com/laguna-ocean-foundation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center"
+                onClick={() => setIsOpen(false)}
               >
-                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer mr-3">
-                  Donate
-                </Button>
+                Donate
               </Link>
               <Link
                 href="https://www.lagunaoceanfoundation.org/volunteering"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
               >
-                <Button className="bg-[#3a899b] text-white w-24 cursor-pointer">
-                  Volunteer
-                </Button>
+                Volunteer
               </Link>
             </div>
           </div>
         </SheetContent>
       </Sheet>
-
-      {/* Desktop Navbar */}
-      <div className="hidden lg:flex lg:w-full items-center justify-between">
-        <Logo />
-        <nav className="flex gap-10 pr-4">
-          {navigationItems.slice(1).map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-base font-semibold hover:underline underline-offset-4 text-[#1a516a]"
-              prefetch={false}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
-      </div>
     </header>
   );
 }
