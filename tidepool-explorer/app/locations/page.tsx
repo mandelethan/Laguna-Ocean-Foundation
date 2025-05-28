@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import InteractiveMap from "../../components/InteractiveMap";
+import dynamic from 'next/dynamic';
+const InteractiveMap = dynamic(() => import('../../components/InteractiveMap'), { ssr: false });
 import Image from "next/image";
 import {
   Accordion,
@@ -14,7 +15,6 @@ import {
   MapPin,
   Route,
   CircleParking,
-  ChevronDown,
 } from "lucide-react";
 
 interface Location {
@@ -55,15 +55,17 @@ function Locations() {
     name.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
 
   return (
-    <section className="bg-[#d6f0ff] text-gray-800 text-lg leading-relaxed">
-      <div className="px-6 pt-32 pb-16">
-        <div className="max-w-[1320px] mx-auto">
-          <h2 className="text-[36px] font-bold text-[#1e4d4d] mb-4">Our Locations</h2>
-          <p className="mb-10">
-            Here at Laguna Beach, you'll discover the best spots to explore Laguna Beach's stunning natural beauty. Focused on the 6 unique tidepool locations, we provide all the details you need, like what marine life to expect, the best times to visit, and tips for a safe and enjoyable experience. You’ll also find information on other must-see landmarks around Laguna Beach to help you make the most of your visit. Click on our locations to find out more!
-          </p>
+    <section className="bg-[#19516a] text-white">
+      <div className="px-6 w-full pt-32 pb-24">
+        <div className="max-w-[1320px] mx-auto space-y-12">
+          <div>
+            <h2 className="text-[36px] font-bold mb-4">Our Locations</h2>
+            <p className="text-lg leading-relaxed">
+              Here at Laguna Beach, you'll discover the best spots to explore Laguna Beach's stunning natural beauty. Focused on the 6 unique tidepool locations, we provide all the details you need, like what marine life to expect, the best times to visit, and tips for a safe and enjoyable experience. You’ll also find information on other must-see landmarks around Laguna Beach to help you make the most of your visit. Click on our locations to find out more!
+            </p>
+          </div>
 
-          <h3 className="text-2xl font-semibold mb-6">All Tidepool Locations</h3>
+          <h2 className="text-[36px] font-bold">All Tidepool Locations</h2>
 
           <InteractiveMap
             onLocationClick={(id) => {
@@ -72,13 +74,13 @@ function Locations() {
             }}
           />
 
-          <div className="bg-[#36879F] rounded-3xl p-6 md:p-10 mt-10">
+          <div className="bg-[#3a899b] rounded-3xl p-6 md:p-10">
             <Accordion
               type="single"
               collapsible
               value={expandedCard}
               onValueChange={setExpandedCard}
-              className="space-y-10"
+              className="[&>*:not(:last-child)]:mb-10"
             >
               {locations.map((location, index) => {
                 const id = location.svgId || formatId(location.name);
@@ -88,35 +90,30 @@ function Locations() {
                   <AccordionItem
                     key={index}
                     value={id}
-                    className="bg-white rounded-3xl shadow-md transition-shadow duration-300 overflow-hidden hover:shadow-xl"
+                    id={cardId}
+                    className="bg-[#19516a] rounded-3xl shadow-md transition-shadow duration-300 overflow-hidden hover:shadow-xl scroll-mt-20 border-b border-[#19516a]"
                   >
-                    <div id={cardId} className="h-1" />
-
-                    <div className="relative w-full h-[200px] md:h-[300px]">
+                    <div className="relative w-full h-[200px] md:h-[300px] overflow-hidden rounded-t-3xl">
                       <Image
                         src={location.image}
                         alt={`${location.name} Picture`}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover rounded-t-3xl"
+                        className="object-cover"
                         priority
                       />
                     </div>
 
-                    <AccordionTrigger className="group flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#295068] text-white rounded-none">
-                      <span>{location.name}</span>
-                      <ChevronDown
-                        strokeWidth={1.5}
-                        className="h-6 w-6 text-white transform transition-transform duration-300 group-data-[state=open]:rotate-180"
-                      />
+                    <AccordionTrigger className="flex justify-between items-center px-6 py-4 text-2xl font-semibold bg-[#19516a] text-white rounded-none">
+                      <span className="text-white">{location.name}</span>
                     </AccordionTrigger>
 
-                    <AccordionContent className="px-6 pb-8 pt-2 text-white bg-[#295068] rounded-b-3xl">
-                      <p className="text-base mb-6">{location.overview}</p>
-                      <div className="space-y-6">
+                    <AccordionContent className="px-6 pb-8 pt-2 text-white bg-[#19516a] rounded-b-3xl overflow-hidden">
+                      <div className="space-y-6 pb-2">
+                        <p className="text-base mb-6">{location.overview}</p>
                         <div>
                           <div className="flex items-center font-semibold text-lg mb-1">
-                            <ChartNoAxesColumnIncreasing strokeWidth={1.5} className="w-5 h-5 mr-2" />
+                            <ChartNoAxesColumnIncreasing className="w-5 h-5 mr-2 text-white" />
                             Accessibility
                           </div>
                           <ul className="ml-7 list-disc text-base">
@@ -128,7 +125,7 @@ function Locations() {
 
                         <div>
                           <div className="flex items-center font-semibold text-lg mb-1">
-                            <MapPin strokeWidth={1.5} className="w-5 h-5 mr-2" />
+                            <MapPin className="w-5 h-5 mr-2 text-white" />
                             Coordinates
                           </div>
                           <ul className="ml-7 list-disc text-base">
@@ -140,7 +137,7 @@ function Locations() {
 
                         <div>
                           <div className="flex items-center font-semibold text-lg mb-1">
-                            <Route strokeWidth={1.5} className="w-5 h-5 mr-2" />
+                            <Route className="w-5 h-5 mr-2 text-white" />
                             Access Point
                           </div>
                           <p className="ml-7 text-base">{location.accessPoint}</p>
@@ -148,14 +145,14 @@ function Locations() {
 
                         <div>
                           <div className="flex items-center font-semibold text-lg mb-1">
-                            <CircleParking strokeWidth={1.5} className="w-5 h-5 mr-2" />
+                            <CircleParking className="w-5 h-5 mr-2 text-white" />
                             Parking
                           </div>
                           <p className="ml-7 text-base">{location.parking}</p>
                         </div>
 
                         {location.coordinates.length > 0 && (
-                          <div className="ml-1 mt-6">
+                          <div className="ml-1 mt-6 pb-2">
                             {(() => {
                               const raw = location.coordinates[0];
                               const dms = raw.includes(":") ? raw.split(":")[1].trim() : raw;
@@ -165,9 +162,9 @@ function Locations() {
                                   href={`https://www.google.com/maps?q=${decimalCoords}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-4 py-2 bg-white text-[#295068] font-semibold rounded-full hover:bg-gray-100 transition"
+                                  className="inline-flex items-center px-4 py-2 bg-white text-[#19516a] font-semibold rounded-full hover:bg-gray-100 transition"
                                 >
-                                  <MapPin strokeWidth={1.5} className="w-4 h-4 mr-2" />
+                                  <MapPin className="w-4 h-4 mr-2" />
                                   View on Google Maps
                                 </a>
                               ) : (
