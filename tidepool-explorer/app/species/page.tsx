@@ -81,7 +81,7 @@ function Species() {
               </p>
             </div>
 
-          <div className="mt-6 lg:mt-0 lg:ml-4 w-full lg:w-[450px] relative z-10">
+            <div className="mt-6 lg:mt-0 lg:ml-4 w-full lg:w-[450px] relative z-10">
               <Dropdown className="w-full bg-white rounded-lg shadow-lg relative">
                 <DropdownTrigger
                   className="w-full h-[50px] bg-white text-[#19516a] px-4 py-2 rounded-lg text-lg font-semibold uppercase flex items-center justify-between cursor-pointer shadow-md"
@@ -103,48 +103,54 @@ function Species() {
           </div>
 
           {/* Species Grid */}
-          {/* Species Grid */}
-<div className="bg-[#3a899b] rounded-3xl p-6 md:p-10">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
-    {getFilteredSpecies().length > 0 ? (
-      getFilteredSpecies()
-        .slice()
-        .sort((a, b) => a.commonName.localeCompare(b.commonName))
-        .map((item, index) => (
-          <div
-            key={index}
-            tabIndex={0}
-            role="button"
-            onClick={() => setSelectedSpecies(item)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                setSelectedSpecies(item);
-              }
-            }}
-            className="w-full aspect-square rounded-3xl overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
-          >
-            <div className="w-full h-full relative">
-              <Image
-                src={item.images[0]}
-                alt={item.commonName}
-                className="w-full h-full object-cover pointer-events-none"
-                fill
-                priority={index < 4}
-              />
-              <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
-                <h3 className="text-white text-center font-bold uppercase text-lg px-2">
-                  {item.commonName}
-                </h3>
-              </div>
+          <div className="bg-[#3a899b] rounded-3xl p-6 md:p-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+              {getFilteredSpecies().length > 0 ? (
+                getFilteredSpecies()
+                  .slice()
+                  .sort((a, b) => a.commonName.localeCompare(b.commonName))
+                  .map((item, index) => (
+                    <div
+                      key={index}
+                      tabIndex={0}
+                      role="button"
+                      onClick={() => setSelectedSpecies(item)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setSelectedSpecies(item);
+                        }
+                      }}
+                      className="w-full aspect-square rounded-3xl overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <div className="w-full h-full relative">
+                        <Image
+                          src={item.images[0]}
+                          alt={item.commonName}
+                          className="w-full h-full object-cover scale-105 pointer-events-none"
+                          fill
+                          priority={index < 4}
+                        />
+                        <div className="absolute bottom-0 w-full bg-[#19516a] py-3 px-2 flex items-center justify-center">
+                          <h3
+                            className="text-white text-center font-bold uppercase leading-tight px-2 text-[1rem] max-w-full"
+                            style={{
+                              transform: item.commonName.length > 22 ? 'scale(0.85)' : 'scale(1)',
+                              transformOrigin: 'center',
+                              whiteSpace: 'nowrap',
+                            }}
+                          >
+                            {item.commonName}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+              ) : (
+                <p className="text-center text-white col-span-full">No species listed.</p>
+              )}
             </div>
           </div>
-        ))
-    ) : (
-      <p className="text-center text-white col-span-full">No species listed.</p>
-    )}
-  </div>
-</div>
 
         </div>
       </div>
@@ -205,3 +211,6 @@ function Species() {
 }
 
 export default Species;
+
+
+

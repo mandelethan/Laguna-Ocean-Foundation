@@ -91,7 +91,7 @@ export default function MPARules() {
             <div className="relative z-10 text-center py-12 px-6 text-white">
               <h2 className="text-2xl font-bold mb-4">Want to find out more?</h2>
               <a
-                href="https://lagunaoceanfoundation.org"
+                href="https://www.lagunaoceanfoundation.org/marine-protected-areas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-white hover:bg-blue-100 text-[#1A516A] font-semibold px-5 py-2 rounded-full shadow-md transition"
