@@ -61,7 +61,7 @@ function Locations() {
           <div>
             <h2 className="text-[36px] font-bold mb-4">Our Locations</h2>
             <p className="text-lg leading-relaxed">
-              Here at Laguna Beach, you'll discover the best spots to explore Laguna Beach's stunning natural beauty. Focused on the 6 unique tidepool locations, we provide all the details you need, like what marine life to expect, the best times to visit, and tips for a safe and enjoyable experience. You’ll also find information on other must-see landmarks around Laguna Beach to help you make the most of your visit. Click on our locations to find out more!
+              Here at Laguna Beach, you&apos;ll discover the best spots to explore Laguna Beach&apos;s stunning natural beauty. Focused on the 6 unique tidepool locations, we provide all the details you need, like what marine life to expect, the best times to visit, and tips for a safe and enjoyable experience. You&apos;ll also find information on other must-see landmarks around Laguna Beach to help you make the most of your visit. Click on our locations to find out more!
             </p>
           </div>
 
