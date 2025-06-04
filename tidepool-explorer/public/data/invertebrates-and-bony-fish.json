@@ -7,7 +7,7 @@
       "/species/invertebrates-and-bony-fish/bat-star/2.jpg",
       "/species/invertebrates-and-bony-fish/bat-star/3.jpg"
     ],
-    "description": "The bat star is a starfish that comes in various colors (red, orange, yellow, brown, green, and purple) its webbing between its legs makes it look similar to a pentagon. It can grow up to eight inches or 20 cm across and commonly has five arms but can have up to nine arms. They use sensors at the end of their feet to “smell” their prey."
+    "description": "The bat star is a seastar that comes in various colors: red, orange, yellow, brown, green, and purple.  The webbing between their arms makes them look similar to a pentagon. They can grow up to eight inches or 20 cm across and commonly have five arms. They use sensors at the end of their feet to “smell” their prey."
   },
   {
     "commonName": "Knobby Sea Star",
@@ -26,11 +26,11 @@
       "/species/invertebrates-and-bony-fish/brittle-star/1.jpg",
       "/species/invertebrates-and-bony-fish/brittle-star/2.jpg"
     ],
-    "description": "The Brittle Star is a unique-looking starfish with a pentagon disc with five long slender arms, on each arm are a row of spines. Are often found in middle or low intertidal pools. They can also live deep in the ocean on the sea floor. It is a suspension feeder meaning it raises its arms upward trapping plankton on its spines."
+    "description": "The Brittle Star is a unique-looking sea star with a pentagonal disc and five long, slender arms. On each arm is a row of spines. They are often found in the middle or lower intertidal zone."
   },
   {
-    "commonName": "Ochre Sea Star Pisaster",
-    "scientificName": "ochraceus",
+    "commonName": "Ochre Sea Star",
+    "scientificName": "Pisaster ochraceus",
     "images": [
       "/species/invertebrates-and-bony-fish/ochre-sea-star-pisaster/1.JPG",
       "/species/invertebrates-and-bony-fish/ochre-sea-star-pisaster/2.JPG",
@@ -46,7 +46,7 @@
       "/species/invertebrates-and-bony-fish/purple-sea-urchin/1.jpg",
       "/species/invertebrates-and-bony-fish/purple-sea-urchin/3.JPG"
     ],
-    "description": "The Purple Sea Urchin looks like a donut without a hole with long purple-red spines extending outward from its core. They move with small tubular feet with suction cups to keep hold of surfaces. They eat algae, kelp, and dead matter."
+    "description": "The Purple Sea Urchin looks like a donut without a hole, with long purple-red spines extending outward from its core. They move with small tubular feet with suction cups to keep hold of surfaces. They eat algae, kelp, and dead matter."
   },
   {
     "commonName": "Red Sea Urchin",
@@ -56,7 +56,7 @@
       "/species/invertebrates-and-bony-fish/red-sea-urchin/2.jpg",
       "/species/invertebrates-and-bony-fish/red-sea-urchin/3.jpg"
     ],
-    "description": "The Red Sea Urchin looks like a 3d oval with long red spines pointing outward from its body.  They are found on hard surfaces and in rocky reefs. They can also live up to 100 years old."
+    "description": "The red sea urchin has long red spines pointing outward from its body. It is found on hard surfaces and in rocky reefs, and it can live for up to 100 years."
   },
   {
     "commonName": "Abalone",
@@ -66,7 +66,7 @@
       "/species/invertebrates-and-bony-fish/abalone/2.jpg",
       "/species/invertebrates-and-bony-fish/abalone/3.JPG"
     ],
-    "description": "Abalone is a marine snail, which is covered by a flattened spiral shell with a line of holes following one edge of its shell. They are commonly known for their beautiful iridescent shell and pearls which have been used for jewelry and art."
+    "description": "The abalone is a marine snail covered by a flattened spiral shell with a line of holes along one edge. It is known for its beautiful iridescent shell and pearls, which have been used in jewelry and art."
   },
   {
     "commonName": "Spiny California Lobster",
@@ -76,7 +76,7 @@
       "/species/invertebrates-and-bony-fish/spiny-california-lobster/2.jpeg",
       "/species/invertebrates-and-bony-fish/spiny-california-lobster/3.jpeg"
     ],
-    "description": "The California spiny lobster is found in the eastern Pacific Ocean ranging from Monterey Bay, California, to the Gulf of Tehuantepec, Mexico. It typically grows to a length of 12 inches (30 cm) and is reddish-brown with stripes along the legs. They have a pair of enlarged antennae but no claws. The interrupted grooves across the tail are characteristic for this species of spiny lobster. California spiny lobster females can carry up to 680,000 eggs!"
+    "description": "The California spiny lobster is found in the eastern Pacific Ocean, ranging from Monterey Bay, California, to the Gulf of Tehuantepec, Mexico. It typically grows to a length of over 12 inches (30 cm) and is reddish-brown with stripes along the legs. Some California spiny lobsters have been known to grow to 3 feet in length! It has a pair of enlarged antennae but no claws."
   },
   {
     "commonName": "California Two-spot Octopus",
@@ -86,7 +86,7 @@
       "/species/invertebrates-and-bony-fish/california-two-spot-octopus/2.jpg",
       "/species/invertebrates-and-bony-fish/california-two-spot-octopus/3.jpg"
     ],
-    "description": "The California Two-spot octopus can easily be found by the blue spots under its eyes. They usually live for one to two years and they can reach up to eight inches long. They enjoy eating clams and snails."
+    "description": "The California two-spot octopus can easily be identified by the blue spots under its eyes. They usually live for one to two years, and they can reach up to 23 inches long when fully outstretched."
   },
   {
     "commonName": "California Sea Hare",
@@ -106,7 +106,7 @@
       "/species/invertebrates-and-bony-fish/spanish-shawl/2.jpg",
       "/species/invertebrates-and-bony-fish/spanish-shawl/3.jpg"
     ],
-    "description": "The Spanish Shawl is a super colorful sea slug. They have purple bodies and the cerata is orange. The cerata sticks up like a mohawk on its back. When being hunted by other predators they can move away by flexing their bodies and pushing off the water."
+    "description": "The Spanish shawl is a super colorful sea slug. It has a purple body and an orange mohawk on its back. The mohawk is made up of cerata, organs that help the slug breathe. When being hunted by other predators, it can move away by flexing its body and pushing off the water."
   },
   {
     "commonName": "Hopkins Rose",
@@ -116,7 +116,7 @@
       "/species/invertebrates-and-bony-fish/hopkins-rose/2.jpg",
       "/species/invertebrates-and-bony-fish/hopkins-rose/3.jpg"
     ],
-    "description": "The Hopkins Rose is a pink sea slug known as a Nudibranch. They are carnivorous feeding on bottomfeeders and they have gills on the outside of their body. What’s interesting is that “Nudibranch” actually translates to naked gill!. "
+    "description": "The Hopkins’ Rose is a pink sea slug known as a nudibranch. They are carnivorous, feeding on bryozoans. They have gills on the outside of their body. What’s interesting is that “nudibranch” actually translates to naked gill!"
   },
   {
     "commonName": "Red Sponge Dorid",
@@ -126,7 +126,7 @@
       "/species/invertebrates-and-bony-fish/red-sponge-dorid/2.jpeg",
       "/species/invertebrates-and-bony-fish/red-sponge-dorid/3.PNG"
     ],
-    "description": "The red sponge dorid is a shell-less marine gastropod mollusk which is a species of sea slug. They are a dorid nudibranch which means they use gills, located on their back, to draw oxygen from the water."
+    "description": "The red sponge dorid is a bright reddish-orange nudibranch, which is a species of sea slug. It is a dorid nudibranch, which means it uses gills, located on their backs, to draw oxygen from the water."
   },
   {
     "commonName": "Navanax",
@@ -155,7 +155,7 @@
       "/species/invertebrates-and-bony-fish/opaleye/1.jpg",
       "/species/invertebrates-and-bony-fish/opaleye/2.jpeg"
     ],
-    "description": "A football-shaped fish with a spikey dorsal fin, short tail, fins next to its head, another set of fins underneath its head, and fins near its rear. They are dullish green-gray and eat primarily algae."
+    "description": "The opaleye is a football-shaped fish with a dull green-gray color, easily identified by the white spots on its back near the fins. It primarily feeds on algae. The opaleye can also breathe air when out of water, allowing it to survive for a time when exposed during low tide."
   },
   {
     "commonName": "Giant Kelpfish",
@@ -168,13 +168,13 @@
     "description": "The Giant Kelpfish is a long thin fish with two small long fins near its head, a short dorsal fin that extends the length of its body, and a bottom fin from mid-length to tail. The shape of their body helps them blend into the kelp. They can change their color to better match their surroundings."
   },
   {
-    "commonName": "Tidepool Sculpin",
-    "scientificName": "Oligocottus maculosus",
+    "commonName": "Sculpin",
+    "scientificName": "Clinocottus analis",
     "images": [
       "/species/invertebrates-and-bony-fish/tidepool-sculpin/1.jpg",
       "/species/invertebrates-and-bony-fish/tidepool-sculpin/2.jpg",
       "/species/invertebrates-and-bony-fish/tidepool-sculpin/3.jpg"
     ],
-    "description": "The tidepool sculpin is a common fish found in tidepools in the intertidal zone of rocky coasts, swimming from one hiding place to another. Each time the tide recedes, they return back to the tidepool in which it has taken up residence. Their coloration is varied, but it is often marbled in grey, brown and white. However, they can quickly camouflage themselves by changing colors to match their surrounding habitat so you may find them in either reddish or greenish coloration. Tidepool sculpins are predators, feeding on small invertebrates such as isopods, amphipods, gastropod molluscs, polychaete worms and barnacles, as well as insects that happen to fall into the water. Small amounts of algae also form part of the diet."
+    "description": "Several species of sculpins live in our local tidepools. These fish are well camouflaged, often blending in well with rocks and sand. They can sit very still, perched on their fins. Most sculpins have spiky fins and bodies. Occasionally, they are mistaken for small sharks"
   }
 ]
