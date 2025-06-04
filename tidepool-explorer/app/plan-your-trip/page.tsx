@@ -101,7 +101,7 @@ function PlanYourTrip() {
             <div>
               <h2 className="text-[36px] font-bold mb-4">Marine Protected Areas</h2>
               <p>
-                MPAs safeguard vital ocean ecosystems, ensuring the health of marine life and habitats like tide pools.
+                MPAs safeguard vital ocean ecosystems, ensuring the health of marine life and habitats like tidepools.
                 These protected zones help preserve biodiversity, support sustainable fisheries, and maintain the delicate balance of coastal environments.
                 By respecting MPAs, we contribute to the long-term health of our oceans and the incredible species that call them home.
               </p>

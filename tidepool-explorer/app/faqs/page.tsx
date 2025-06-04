@@ -35,7 +35,7 @@ const faqData = [
     category: "Things to Do",
     question: "What are other landmarks I can visit?",
     answer:
-      "The Laguna Ocean Foundation worked with California Coastal National Monument to have the rocky areas and reefs off the coast of Laguna Beach protected as a National Monument. Which means that basically everywhere you’re looking off the coast is one big landmark! Bird Rock and Seal Rock are two of the most prominent areas within Laguna Beach that’s protected by this status. Check them out when you visit either Heisler Park or Crescent Bay! There’s also a very picturesque sea cave at Treasure Island that’s worth checking out while exploring the tidepools.",
+      "The Laguna Ocean Foundation worked with California Coastal National Monument to have the rocky areas and reefs off the coast of Laguna Beach protected as a National Monument. Which means that basically everywhere you’re looking off the coast is one big landmark! Bird Rock and Seal Rock are two of the most prominent areas within Laguna Beach that’s protected by this status. Check them out when you visit either Heisler Park or Crescent Bay! There’s also a very picturesque rock arch at Treasure Island that’s worth checking out while exploring the tidepools.",
   },
   {
     category: "Things to Do",
@@ -55,19 +55,19 @@ const faqData = [
     category: "Tidepool Information",
     question: "Are there any sharks in the tidepools?",
     answer:
-      "Most of the sharks seen from shore around Laguna Beach are leopard sharks. These harmless sharks are usually seen in the shallow waters of sandy beaches, skimming the sand in search of food. On rare occasions, a leopard shark may get swept into a tide pool. However, it would likely disperse back to the open ocean as soon as possible. There are, however, small fish in the tide pools that are often mistaken for baby sharks. These fish are sculpins and look somewhat similar to small sharks and tend to sit on the bottom of the pools.",
+      "Most of the sharks seen from shore around Laguna Beach are leopard sharks. These harmless sharks are usually seen in the shallow waters of sandy beaches, skimming the sand in search of food. On rare occasions, a leopard shark may get swept into a tidepool. However, it would likely disperse back to the open ocean as soon as possible. There are, however, small fish in the tidepools that are often mistaken for baby sharks. These fish are sculpins and look somewhat similar to small sharks and tend to sit on the bottom of the pools.",
   },
   {
     category: "Tidepool Information",
     question: "Are there any harmful species found in the tidepools?",
     answer:
-      "Yes, there are several species that can hurt you in our tide pools. Purple Sea Urchins can pierce skin with their spines. Crabs can pinch with their claws. Moray eels can bite with their teeth. Octopus can bite with their beaks. There are species of marine worms that can deliver a powerful, envenomated bite. Luckily, almost all of these potentially dangerous animal interactions can be avoided if you are following the MPA rules and not stepping in the tide pools or touching the animals. It is also important to watch your step on the rocks, because the mussel and barnacles can cause scrapes and bruises.",
+      "Yes, there are several species that can hurt you in our tidepools. Purple Sea Urchins can pierce skin with their spines. Crabs can pinch with their claws. Moray eels can bite with their teeth. Octopus can bite with their beaks. There are species of marine worms that can deliver a powerful, envenomated bite. Luckily, almost all of these potentially dangerous animal interactions can be avoided if you are following the MPA rules and not stepping in the tidepools or touching the animals. It is also important to watch your step on the rocks, because the mussel and barnacles can cause scrapes and bruises.",
   },
   {
     category: "Tidepool Information",
     question: "What are the seasonal changes to the tidepools?",
     answer:
-      "The tide pools experience seasonal change in several ways. Just like the open ocean, water temperature in the tide pools tends to be warmer in the summer and fall, and cooler in the winter and spring. The temperature fluctuations in shallow tide pools can be extreme! Another obvious seasonal change is sand and beach erosion. During winter and spring storms and swells, much of the sandy beach can be swept away. Sometimes this reveals more rocks, increasing the area of the rocky intertidal zone. Usually, the sand is naturally deposited by wave action again in late spring and summer. During this time, much of the intertidal zone may appear “sanded in.” As well, a number of the creatures living in the tide pools have seasonal cycles. Some animals, like sea hares, are very visible during certain seasons and almost entirely absent during others.",
+      "The tidepools experience seasonal change in several ways. Just like the open ocean, water temperature in the tidepools tends to be warmer in the summer and fall, and cooler in the winter and spring. The temperature fluctuations in shallow tidepools can be extreme! Another obvious seasonal change is sand and beach erosion. During winter and spring storms and swells, much of the sandy beach can be swept away. Sometimes this reveals more rocks, increasing the area of the rocky intertidal zone. Usually, the sand is naturally deposited by wave action again in late spring and summer. During this time, much of the intertidal zone may appear “sanded in.” As well, a number of the creatures living in the tidepools have seasonal cycles. Some animals, like sea hares, are very visible during certain seasons and almost entirely absent during others.",
   },
 ];
 

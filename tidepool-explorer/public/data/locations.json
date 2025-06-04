@@ -43,9 +43,9 @@
     "image": "/locations/Heisler Park.png"
   },
   {
-    "name": "Shaws Cove (North and South)",
+    "name": "Shaw's Cove (North and South)",
     "svgId": "shaws-cove",
-    "overview": "Shaws Cove is known for some great rocky structures and deep crevices for octopus hiding spots. Shaws south is an easy to access, flat mussel bed that can be a good place to find sea stars during low tide and watch various shore birds as they feed in the mussel beds. There are also many species of anemones that can be found at both north and south locations.",
+    "overview": "Shaw's Cove is known for some great rocky structures and deep crevices for octopus hiding spots. Shaw's south is an easy to access, flat mussel bed that can be a good place to find sea stars during low tide and watch various shore birds as they feed in the mussel beds. There are also many species of anemones that can be found at both north and south locations.",
     "accessibility": [
       "North: Moderate to Advanced",
       "South: Beginner to Moderate"
@@ -73,7 +73,7 @@
   },
   {
     "name": "Wood's Cove",
-    "overview": "Woods Cove has easy beach access via stairs and is a popular spot for swimmers, snorkelers, and SCUBA divers. The rocky tidepools aren\u2019t as accessible and they occupy a smaller area, but you may find some urchins and anemones during a low tide.",
+    "overview": "Wood's Cove has easy beach access via stairs and is a popular spot for swimmers, snorkelers, and SCUBA divers. The rocky tidepools aren\u2019t as accessible and they occupy a smaller area, but you may find some urchins and anemones during a low tide.",
     "accessibility": [
       "Advanced"
     ],
