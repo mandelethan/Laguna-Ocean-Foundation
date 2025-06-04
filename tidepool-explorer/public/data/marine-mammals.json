@@ -17,7 +17,7 @@
       "/species/marine-mammals/harbor-seal/2.JPG",
       "/species/marine-mammals/harbor-seal/3.jpg"
     ],
-    "description": "Harbor seals are earless seals with spotted coats. They are often seen lounging on rocks and beaches and are strong swimmers, capable of diving deep to catch fish and squid."
+    "description": "The harbor seal is a widely distributed pinniped found in coastal waters of the northern Atlantic and Pacific Oceans, as well as the North and Baltic Seas. It has a thick blubber layer for warmth and comes in colors like brown, gray, tan, or silvery white—often with spots. Adults can reach 6 feet and 370 pounds. Harbor seals return to familiar haul-out sites—rocky spots that offer shelter from waves, weather, and predators. Always stay at least 150 feet away from seals and other marine mammals to protect both them and yourself."
   },
   {
     "commonName": "Bottlenose Dolphin",
@@ -26,7 +26,7 @@
       "/species/marine-mammals/bottlenose-dolphin/1.jpg",
       "/species/marine-mammals/bottlenose-dolphin/2.jpg"
     ],
-    "description": "The Bottlenose Dolphin is easily identifiable by its distinct face shape with its snout and its gray color. The Bottlenose will come close to shore on many occasions and be spottable from the beach. They work together in herds to farm fish together and use echolocation to locate their food. "
+    "description": "The Bottlenose Dolphin is easily identifiable by its distinct face shape, with its blunt snout and gray color. The Bottlenose will come close to shore on many occasions and be spottable from the beach. They work together in herds to farm fish together and use echolocation to locate their food."
   },
   {
     "commonName": "Common Dolphin",
@@ -46,6 +46,6 @@
       "/species/marine-mammals/gray-whale/2.jpg",
       "/species/marine-mammals/gray-whale/3.jpg"
     ],
-    "description": "Gray Whales can grow up to be over 50 feet long and they have gray bodies with small black eyes. Females are typically bigger than males. They are at high risk of getting stuck in fishing nets and when they get stuck they drag themselves along, resulting in fatigue which can lead to death. They are primarily bottom feeders scouring the ocean floor for food and are prayed on by killer whales."
+    "description": "Gray whales can grow up to be over 50 feet long and have gray bodies with small black eyes. Females are typically bigger than males. They are at high risk of getting stuck in fishing nets, which can lead to fatigue, starvation, and death. They are primarily bottom feeders, scouring the ocean floor for food. They can be preyed on by killer whales."
   }
 ]

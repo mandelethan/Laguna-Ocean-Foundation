@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from "react";
 import { Dropdown, DropdownTrigger, DropdownContent } from "@/components/ui/dropdown";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -14,10 +14,7 @@ interface Species {
 }
 
 function Species() {
-  // State for the selected species (to show more info in a dialog)
   const [selectedSpecies, setSelectedSpecies] = useState<Species | null>(null);
-
-  // State to hold all species data by category
   const [speciesData, setSpeciesData] = useState<{
     birds: Species[];
     marineMammals: Species[];
@@ -29,64 +26,32 @@ function Species() {
     invertebratesAndBonyFish: [],
     invasiveSpecies: [],
   });
-
-  // State to track the selected category (dropdown selection)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  
-  // State to track whether the dropdown is open or closed
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Fetch species data for each category
   useEffect(() => {
-    // Fetching data for different species categories
     fetch("/data/birds.json")
       .then((res) => res.json())
-      .then((data: Species[]) => {
-        setSpeciesData((prevData) => ({
-          ...prevData,
-          birds: data,
-        }));
-      })
-      .catch((error) => console.error("Error fetching birds data:", error));
+      .then((data) => setSpeciesData(prev => ({ ...prev, birds: data })));
 
     fetch("/data/marine-mammals.json")
       .then((res) => res.json())
-      .then((data: Species[]) => {
-        setSpeciesData((prevData) => ({
-          ...prevData,
-          marineMammals: data,
-        }));
-      })
-      .catch((error) => console.error("Error fetching marine mammals data:", error));
+      .then((data) => setSpeciesData(prev => ({ ...prev, marineMammals: data })));
 
     fetch("/data/invertebrates-and-bony-fish.json")
       .then((res) => res.json())
-      .then((data: Species[]) => {
-        setSpeciesData((prevData) => ({
-          ...prevData,
-          invertebratesAndBonyFish: data,
-        }));
-      })
-      .catch((error) => console.error("Error fetching invertebrates and bony fish data:", error));
+      .then((data) => setSpeciesData(prev => ({ ...prev, invertebratesAndBonyFish: data })));
 
     fetch("/data/invasive-species.json")
       .then((res) => res.json())
-      .then((data: Species[]) => {
-        setSpeciesData((prevData) => ({
-          ...prevData,
-          invasiveSpecies: data,
-        }));
-      })
-      .catch((error) => console.error("Error fetching invasive species data:", error));
+      .then((data) => setSpeciesData(prev => ({ ...prev, invasiveSpecies: data })));
   }, []);
 
-  // Function to handle dropdown selection
   const handleCategorySelect = (category: string) => {
-    setSelectedCategory(category);  // Set the selected category
-    setIsDropdownOpen(false); // Close the dropdown after selection
+    setSelectedCategory(category);
+    setIsDropdownOpen(false);
   };
 
-  // Function to filter species based on selected category
   const getFilteredSpecies = () => {
     switch (selectedCategory) {
       case "Birds":
@@ -98,142 +63,146 @@ function Species() {
       case "Invasive Species":
         return speciesData.invasiveSpecies;
       default:
-        return speciesData.birds;  // Default to birds if no category selected
+        return speciesData.birds;
     }
   };
 
   return (
-    <section className="pt-20 bg-[#19516a] min-h-screen flex flex-col">
-  <div className="flex flex-col">
-    <div className="text-white text-left mx-8 mt-8 relative">
+    <section className="pt-32 pb-24 bg-[#19516a] min-h-screen flex flex-col text-white text-lg leading-relaxed">
+      <div className="px-6 w-full">
+        <div className="max-w-[1320px] mx-auto">
 
-  {/* Top block: Heading and Dropdown */}
-  <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
-    <div>
-      <h2 className="text-5xl font-bold mb-3">Species Guide</h2>
-      <h3 className="text-xl font-semi-bold mt-2">Learn more about the species you will encounter visiting the tide-pools.</h3>
-    </div>
+          {/* Heading and Dropdown */}
+          <div className="w-full grid lg:grid-cols-[1fr_auto] gap-4 mb-10 items-end">
+            <div>
+              <h2 className="text-[36px] font-bold mb-4">Species Guide</h2>
+              <p className="text-lg">
+                Learn more about the species you will encounter while visiting the tidepools. Browse categories using the dropdown and click on each tile for more details.
+              </p>
+            </div>
 
-    {/* Dropdown for species category selection */}
-    <Dropdown className="w-full lg:w-[450px] bg-white rounded-lg shadow-lg z-10 relative">
-      <DropdownTrigger
-        className="w-full lg:w-[450px] h-[50px] bg-white text-[#19516a] px-4 py-2 rounded-lg text-lg font-semibold uppercase flex items-center justify-between cursor-pointer shadow-md"
-        onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-      >
-        {selectedCategory ? selectedCategory : "Birds"} <span className="ml-2">▾</span>
-      </DropdownTrigger>
+            <div className="mt-6 lg:mt-0 lg:ml-4 w-full lg:w-[450px] relative z-10">
+              <Dropdown className="w-full bg-white rounded-lg shadow-lg relative">
+                <DropdownTrigger
+                  className="w-full h-[50px] bg-white text-[#19516a] px-4 py-2 rounded-lg text-lg font-semibold uppercase flex items-center justify-between cursor-pointer shadow-md"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                >
+                  {selectedCategory ? selectedCategory : "Birds"} <span className="ml-2">▾</span>
+                </DropdownTrigger>
 
-      {isDropdownOpen && (
-        <DropdownContent className="w-full lg:w-[450px] bg-white rounded-lg shadow-lg mt-2 z-50 
-        relative lg:absolute lg:left-0 lg:top-full border border-gray-200">
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Birds")}>Birds</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Marine Mammals")}>Marine Mammals</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Invertebrates And Bony Fish")}>Invertebrates and Bony Fish</button>
-          <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100" onClick={() => handleCategorySelect("Invasive Species")}>Invasive Species</button>
-        </DropdownContent>
-      )}
-    </Dropdown>
-  </div>
-</div>
-</div>
+                {isDropdownOpen && (
+                  <DropdownContent className="absolute top-full mt-2 w-full bg-white rounded-lg shadow-lg border border-gray-200 z-50">
+                    <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Birds")}>Birds</button>
+                    <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Marine Mammals")}>Marine Mammals</button>
+                    <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Invertebrates And Bony Fish")}>Invertebrates and Bony Fish</button>
+                    <button className="block w-full text-[#19516a] text-lg text-left px-4 py-2 hover:bg-gray-100 rounded-lg" onClick={() => handleCategorySelect("Invasive Species")}>Invasive Species</button>
+                  </DropdownContent>
+                )}
+              </Dropdown>
+            </div>
+          </div>
 
-      {/* New species grid with the updated design */}
-      <div className="mx-8 mt-6 mb-8 p-6 bg-[#5a8baa] rounded-lg">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {getFilteredSpecies().length > 0 ? (
-            getFilteredSpecies()
-            .slice()
-            .sort((a, b) => a.commonName.localeCompare(b.commonName))
-            .map((item, index) => (
-              <div
-                key={index}
-                className="relative aspect-square rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition"
-                onClick={() => setSelectedSpecies(item)}
-              >
-                <Image
-                  src={item.images[0]}
-                  alt={item.commonName}
-                  className="w-full h-full object-cover"
-                  width={400}
-                  height={400}
-                  priority={index < 4} // Priority load for visible items
-                />
-                <div className="absolute bottom-0 w-full bg-[#19516a] py-3">
-                  <h3 className="text-white text-center font-bold uppercase text-lg px-2">
-                    {item.commonName}
-                  </h3>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="text-center text-white col-span-full">No species listed.</p>
-          )}
+          {/* Species Grid */}
+          <div className="bg-[#3a899b] rounded-3xl p-6 md:p-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+              {getFilteredSpecies().length > 0 ? (
+                getFilteredSpecies()
+                  .slice()
+                  .sort((a, b) => a.commonName.localeCompare(b.commonName))
+                  .map((item, index) => (
+                    <div
+                      key={index}
+                      tabIndex={0}
+                      role="button"
+                      onClick={() => setSelectedSpecies(item)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setSelectedSpecies(item);
+                        }
+                      }}
+                      className="w-full aspect-square rounded-3xl overflow-hidden cursor-pointer hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-white"
+                    >
+                      <div className="w-full h-full relative">
+                        <Image
+                          src={item.images[0]}
+                          alt={item.commonName}
+                          className="w-full h-full object-cover scale-105 pointer-events-none"
+                          fill
+                          priority={index < 4}
+                        />
+                        <div className="absolute bottom-0 w-full bg-[#19516a] py-3 px-2 flex items-center justify-center">
+                          <h3
+                            className="text-white text-center font-bold uppercase leading-tight px-2 text-[1rem] max-w-full"
+                            style={{
+                              transform: item.commonName.length > 22 ? 'scale(0.85)' : 'scale(1)',
+                              transformOrigin: 'center',
+                              whiteSpace: 'nowrap',
+                            }}
+                          >
+                            {item.commonName}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+              ) : (
+                <p className="text-center text-white col-span-full">No species listed.</p>
+              )}
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* Dialog Popup for selected species */}
+      {/* Dialog for Species Detail */}
       {selectedSpecies && (
         <Dialog open={Boolean(selectedSpecies)} onOpenChange={() => setSelectedSpecies(null)}>
-          <DialogContent showClose={false} className="p-0 
-                                                      w-full 
-                                                      !max-w-[90vw]
-                                                      sm:!w-[600px] 
-                                                      md:!w-[800px] 
-                                                      lg:!w-[800px] 
-                                                      xl:!w-[800px] 
-                                                      max-h-screen 
-                                                      bg-[#19516a] 
-                                                      rounded-lg
-                                                      border-0">
-            {/* Blue header with species name */}
+          <DialogContent
+            showClose={false}
+            className="p-0 w-full !max-w-[90vw] sm:!w-[600px] md:!w-[800px] max-h-screen bg-[#19516a] rounded-lg border-0"
+          >
             <div className="text-white p-8 relative flex flex-col gap-4">
               <h2 className="text-4xl font-bold">{selectedSpecies.commonName}</h2>
               <p className="text-xl italic">{selectedSpecies.scientificName}</p>
-              <button 
+              <button
                 onClick={() => setSelectedSpecies(null)}
                 className="absolute top-6 right-6 text-white hover:opacity-80"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg> 
-                
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
               </button>
             </div>
-            
-            {/* Content area with horizontal layout */}
+
             <div className="bg-white p-6 flex flex-col gap-4 rounded-b-lg">
-  {/* Description on top */}
-  <div className="text-[#19516a] text-base leading-relaxed">
-    <p>{selectedSpecies.description}</p>
-  </div>
+              <div className="text-[#19516a] text-base leading-relaxed">
+                <p>{selectedSpecies.description}</p>
+              </div>
 
-  {/* Image carousel below */}
-  <div className="w-full">
-    <Carousel className="w-full flex flex-col items-center">
-      <div className="w-full">
-        <CarouselContent>
-          {selectedSpecies.images.map((img, imgIndex) => (
-            <CarouselItem key={imgIndex} className="flex justify-center">
-            <div className="flex items-center justify-center w-full max-w-[600px] aspect-video bg-white rounded-lg overflow-hidden">
-              <img
-                src={img}
-                alt={selectedSpecies.commonName}
-                className="max-w-full max-h-full rounded-lg"
-              />
+              <div className="w-full">
+                <Carousel className="w-full flex flex-col items-center">
+                  <div className="w-full">
+                    <CarouselContent>
+                      {selectedSpecies.images.map((img, imgIndex) => (
+                        <CarouselItem key={imgIndex} className="flex justify-center">
+                          <div className="flex items-center justify-center w-full max-w-[600px] aspect-video bg-white rounded-lg overflow-hidden">
+                            <img
+                              src={img}
+                              alt={selectedSpecies.commonName}
+                              className="max-w-full max-h-full rounded-lg"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </div>
+                  <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
+                  <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
+                </Carousel>
+              </div>
             </div>
-          </CarouselItem>
-          ))}
-        </CarouselContent>
-      </div>
-
-      {/* Arrows beside image */}
-      <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
-      <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full text-[#19516a] shadow-md" />
-    </Carousel>
-  </div>
-</div>
-
           </DialogContent>
         </Dialog>
       )}
@@ -242,3 +211,6 @@ function Species() {
 }
 
 export default Species;
+
+
+
